@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <time.h>
 #define CACHE_MIN (1024)
@@ -34,9 +33,10 @@ void main()
 		//Use different stride sizes to traverse. Start at 1, then double
 		//the stride every iteration, stopping when the stride size is greater
 		//than half the currently used cache size (csize).
+		size_t num = 0;
 		for (stride = 1; stride <= csize/2; stride = stride * 2)
 		{
-			//Set the total time taken to 0 seconds at first.
+			//Set the total time taken to 0 seconds
 			sec = 0;
 
 			//The limit is the number of times the innermost loop in the
@@ -129,9 +129,20 @@ void main()
 			//assumed cache size (in bytes), the stride length (in bytes), and
 			//finally, the average time for each individual read and write, in
 			//nanoseconds (1e-9 s)
+			/*
 			printf("Size:%7d Stride:%7d read+write:%f ns\n",
 				csize * sizeof(int), stride * sizeof(int),
+			*/
+			printf("%f, ",
 				(double) sec*1e9/(double)(steps*SAMPLE*stride*((limit-1)/stride+1)));
+			num++;
 		}
+
+		while (num < 19)
+		{
+			printf("0, ");
+			num++;
+		}
+		printf("0;\n");
 	}
 }
