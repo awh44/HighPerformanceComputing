@@ -65,12 +65,17 @@
   59              		.loc 1 7 0
   60              		.cfi_startproc
   61              	.LVL0:
+                        #####CS540 COMMENT Immediately move the values (4, 4, 4, 4) into
+                        #####%xmm3
   62 0000 660F6F1D 		movdqa	.LC1(%rip), %xmm3	#, vect_cst_.20
   62      00000000 
   63              		.loc 1 7 0
   64 0008 31C0     		xorl	%eax, %eax	# ivtmp.45
+
+                        #####CS540 COMMENT Move the values 0, 1, 2, 3 (at .LC0) into %xmm0
   65 000a 660F6F05 		movdqa	.LC0(%rip), %xmm0	#, vect_vec_iv_.21
   65      00000000 
+                        #####CS540 COMMENT Move the values 1, 1, 1, 1 into the %xmm2 register
   66 0012 660F6F15 		movdqa	.LC2(%rip), %xmm2	#, tmp94
   66      00000000 
   67 001a EB08     		jmp	.L3	#
@@ -86,16 +91,27 @@
   11:test4f.c      ****    {
   12:test4f.c      ****     a[i] = i;
   74              		.loc 1 12 0 discriminator 2
+                        
+                        #####CS540 COMMENT Store the values currently held at %xmm0 at the current
+                        #####position of a. The values will be (0, 1, 2, 3), then (4, 5, 6, 7), etc.
   75 0024 0F298000 		movaps	%xmm0, a(%rax)	# vect_vec_iv_.21, MEM[symbol: a, index: ivtmp.45_31, offset: 0B]
   75      000000
+                        #####CS540 COMMENT Move all the values at %xmm0 into the SSE registe %xmm1
   76 002b 660F6FC8 		movdqa	%xmm0, %xmm1	# vect_vec_iv_.21, vect_vec_iv_.21
   77 002f 4883C010 		addq	$16, %rax	#, ivtmp.45
   13:test4f.c      ****     b[i] = 1;
   78              		.loc 1 13 0 discriminator 2
+
+                        #####CS540 COMMENT Store the four values contained in %xmm2 (all 1) to the
+                        #####current position of b
   79 0033 0F299000 		movaps	%xmm2, b-16(%rax)	# tmp94, MEM[symbol: b, index: ivtmp.45_31, offset: 0B]
   79      000000
   80 003a 483D0010 		cmpq	$4096, %rax	#, ivtmp.45
   80      0000
+
+                        ######CS540 COMMENT Add 4 to all the values in xmm1 (the current loop indices)
+                        ######to "increment" (because 4 elements were just processed) to the next
+                        ######iteration
   81 0040 660FFECB 		paddd	%xmm3, %xmm1	# vect_cst_.20, vect_vec_iv_.21
   82 0044 75DA     		jne	.L7	#,
   83              		.loc 1 13 0 is_stmt 0
@@ -109,11 +125,20 @@
   17:test4f.c      ****    {
   18:test4f.c      ****     a[i] = a[i] + b[i];
   88              		.loc 1 18 0 is_stmt 1 discriminator 2
+                        #####CS540 Retrieve the next four elements of a and store them in the SSE
+                        #####register %xmm0
   89 0048 660F6F80 		movdqa	a(%rax), %xmm0	# MEM[symbol: a, index: ivtmp.36_21, offset: 0B], vect_var_.13
   89      00000000 
+                        #####CS540 COMMENT Skip ahead 16 bytes/4 elements
   90 0050 4883C010 		addq	$16, %rax	#, ivtmp.36
+
+                        #####CS540 COMMENT Do a vector addition of the current four elements of b
+                        #####with %xmm0, which was just loaded as the four current elements of a
   91 0054 660FFE80 		paddd	b-16(%rax), %xmm0	# MEM[symbol: b, index: ivtmp.36_21, offset: 0B], vect_var_.13
   91      00000000 
+
+                        #####CS540 COMMENT Store the result of the addition back to the 4 elements of
+                        #####a, as aligned pack single precision values
   92 005c 0F298000 		movaps	%xmm0, a-16(%rax)	# vect_var_.13, MEM[symbol: a, index: ivtmp.36_21, offset: 0B]
   92      000000
   93 0063 483D0010 		cmpq	$4096, %rax	#, ivtmp.36

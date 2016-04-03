@@ -64,12 +64,20 @@
   58              		.loc 1 7 0
   59              		.cfi_startproc
   60              	.LVL0:
+                        #####CS540 COMMENT Put the four int values (4, 4, 4, 4) (a double quadword)
+                        #####into %xmm3, aligned
   61 0000 660F6F1D 		movdqa	.LC1(%rip), %xmm3	#, vect_cst_.21
   61      00000000 
   62              		.loc 1 7 0
   63 0008 31C0     		xorl	%eax, %eax	# ivtmp.47
+
+                        #####CS540 COMMENT Put the four integer values (0, 1, 2, 3) (a double
+                        #####quadword) into %xmm0, aligned
   64 000a 660F6F05 		movdqa	.LC0(%rip), %xmm0	#, vect_vec_iv_.22
   64      00000000 
+
+                        #####CS540 COMMENT Put the four aligned, packed single precision numbers
+                        #####(100, 100, 100, 100) into %xmm2
   65 0012 0F281500 		movaps	.LC2(%rip), %xmm2	#, tmp96
   65      000000
   66 0019 EB09     		jmp	.L3	#
@@ -78,8 +86,11 @@
   68      00
   69              		.p2align 3
   70              	.L7:
+                        #####CS540 COMMENT Move the double quadword integers in %xmm1 to %xmm0
   71 0020 660F6FC1 		movdqa	%xmm1, %xmm0	# vect_vec_iv_.22, vect_vec_iv_.22
   72              	.L3:
+                        #####CS540 COMMENT Move the current values of %xmm0 into %xmm1, which
+                        #####are the double quadword integer indices
   73 0024 660F6FC8 		movdqa	%xmm0, %xmm1	# vect_vec_iv_.22, vect_vec_iv_.22
   74 0028 4883C010 		addq	$16, %rax	#, ivtmp.47
    8:test9.c       ****   int i, n;
@@ -88,14 +99,22 @@
   11:test9.c       ****    {
   12:test9.c       ****     a[i] = (float) i;
   75              		.loc 1 12 0 discriminator 2
+                        ######CS540 COMMENT Cast %xmm0 to four floats rather than four integers
   76 002c 0F5BC0   		cvtdq2ps	%xmm0, %xmm0	# vect_vec_iv_.22, tmp87
   13:test9.c       ****     b[i] = 100.0;
   77              		.loc 1 13 0 discriminator 2
+                        ######CS540 COMMENT Store the four float values (100, 100, 100, 100) to
+                        ######The current position of b
   78 002f 0F299000 		movaps	%xmm2, b-16(%rax)	# tmp96, MEM[symbol: b, index: ivtmp.47_33, offset: 0B]
   78      000000
+                        ######CS540 COMMENT "Increment" the indices by adding 4 to each value,
+                        ######because four elements were just processed
   79 0036 660FFECB 		paddd	%xmm3, %xmm1	# vect_cst_.21, vect_vec_iv_.22
   12:test9.c       ****     b[i] = 100.0;
   80              		.loc 1 12 0 discriminator 2
+
+                        ######CS540 COMMENT store the casted values, which are (0, 1, 2, 3),
+                        ######then (4, 5, 6, 7), etc., into the a array, at the current position
   81 003a 0F298000 		movaps	%xmm0, a-16(%rax)	# tmp87, MEM[symbol: a, index: ivtmp.47_33, offset: 0B]
   81      000000
   82 0041 483D0010 		cmpq	$4096, %rax	#, ivtmp.47
@@ -113,11 +132,19 @@
   17:test9.c       ****    {
   18:test9.c       ****     a[i] = ((b[i] > a[i]) ? b[i] : a[i]);
   89              		.loc 1 18 0
+                        #####CS540 COMMENT Load the 4 current values of b into %xmm0
   90 0050 0F288000 		movaps	b(%rax), %xmm0	# MEM[symbol: b, index: ivtmp.38_22, offset: 0B], vect_iftmp.14
   90      000000
+                        #####CS540 COMMENT Skip to the next four elements for the next iteration
   91 0057 4883C010 		addq	$16, %rax	#, ivtmp.38
+
+                        ######CS540 COMMENT Take the max of the current elements of a and the current
+                        ######elements of b (which are held in %xmm0 by line 90) as packed
+                        ######single-precision numbers, leaving the result in %xmm0, by
   92 005b 0F5F8000 		maxps	a-16(%rax), %xmm0	# MEM[symbol: a, index: ivtmp.38_22, offset: 0B], vect_iftmp.14
   92      000000
+                        #####CS540 COMMENT Store the results of the max operation back to the
+                        #####currently indexed elements of a
   93 0062 0F298000 		movaps	%xmm0, a-16(%rax)	# vect_iftmp.14, MEM[symbol: a, index: ivtmp.38_22, offset: 0B]
   93      000000
   94 0069 483D0010 		cmpq	$4096, %rax	#, ivtmp.38
@@ -127,6 +154,7 @@
   20:test9.c       **** 
   21:test9.c       ****   n = dx(a[0]);
   96              		.loc 1 21 0
+                        #####CS540 COMMENT Cast a's first element as a double and store it in %xmm0
   97 0071 F30F5A05 		cvtss2sd	a(%rip), %xmm0	# a, D.1812
   97      00000000 
   98 0079 B8010000 		movl	$1, %eax	#,

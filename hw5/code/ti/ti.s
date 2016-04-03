@@ -3,56 +3,54 @@
    3              	#	compiled by GNU C version 4.8.4, GMP version 5.1.3, MPFR version 3.1.2-p3, MPC version 1.0.1
    4              	# GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
    5              	# options passed:  -imultiarch x86_64-linux-gnu ti.c -mtune=opteron-sse3
-   6              	# -msse3 -march=x86-64 -mfpmath=sse -g -O2 -fverbose-asm -ftree-vectorize
+   6              	# -msse3 -march=x86-64 -mfpmath=sse -g -fverbose-asm -ftree-vectorize
    7              	# -ftree-vectorizer-verbose=7 -fstack-protector -Wformat -Wformat-security
    8              	# options enabled:  -faggressive-loop-optimizations
-   9              	# -fasynchronous-unwind-tables -fauto-inc-dec -fbranch-count-reg
-  10              	# -fcaller-saves -fcombine-stack-adjustments -fcommon -fcompare-elim
-  11              	# -fcprop-registers -fcrossjumping -fcse-follow-jumps -fdefer-pop
-  12              	# -fdelete-null-pointer-checks -fdevirtualize -fdwarf2-cfi-asm
-  13              	# -fearly-inlining -feliminate-unused-debug-types -fexpensive-optimizations
-  14              	# -fforward-propagate -ffunction-cse -fgcse -fgcse-lm -fgnu-runtime
-  15              	# -fgnu-unique -fguess-branch-probability -fhoist-adjacent-loads -fident
-  16              	# -fif-conversion -fif-conversion2 -findirect-inlining -finline
-  17              	# -finline-atomics -finline-functions-called-once -finline-small-functions
-  18              	# -fipa-cp -fipa-profile -fipa-pure-const -fipa-reference -fipa-sra
-  19              	# -fira-hoist-pressure -fira-share-save-slots -fira-share-spill-slots
-  20              	# -fivopts -fkeep-static-consts -fleading-underscore -fmath-errno
-  21              	# -fmerge-constants -fmerge-debug-strings -fmove-loop-invariants
-  22              	# -fomit-frame-pointer -foptimize-register-move -foptimize-sibling-calls
-  23              	# -foptimize-strlen -fpartial-inlining -fpeephole -fpeephole2
-  24              	# -fprefetch-loop-arrays -free -freg-struct-return -fregmove
-  25              	# -freorder-blocks -freorder-functions -frerun-cse-after-loop
-  26              	# -fsched-critical-path-heuristic -fsched-dep-count-heuristic
-  27              	# -fsched-group-heuristic -fsched-interblock -fsched-last-insn-heuristic
-  28              	# -fsched-rank-heuristic -fsched-spec -fsched-spec-insn-heuristic
-  29              	# -fsched-stalled-insns-dep -fschedule-insns2 -fshow-column -fshrink-wrap
-  30              	# -fsigned-zeros -fsplit-ivs-in-unroller -fsplit-wide-types
-  31              	# -fstack-protector -fstrict-aliasing -fstrict-overflow
-  32              	# -fstrict-volatile-bitfields -fsync-libcalls -fthread-jumps
-  33              	# -ftoplevel-reorder -ftrapping-math -ftree-bit-ccp -ftree-builtin-call-dce
-  34              	# -ftree-ccp -ftree-ch -ftree-coalesce-vars -ftree-copy-prop
-  35              	# -ftree-copyrename -ftree-cselim -ftree-dce -ftree-dominator-opts
-  36              	# -ftree-dse -ftree-forwprop -ftree-fre -ftree-loop-if-convert
-  37              	# -ftree-loop-im -ftree-loop-ivcanon -ftree-loop-optimize
-  38              	# -ftree-parallelize-loops= -ftree-phiprop -ftree-pre -ftree-pta
-  39              	# -ftree-reassoc -ftree-scev-cprop -ftree-sink -ftree-slp-vectorize
-  40              	# -ftree-slsr -ftree-sra -ftree-switch-conversion -ftree-tail-merge
-  41              	# -ftree-ter -ftree-vect-loop-version -ftree-vectorize -ftree-vrp
-  42              	# -funit-at-a-time -funwind-tables -fvar-tracking
-  43              	# -fvar-tracking-assignments -fverbose-asm -fzero-initialized-in-bss
-  44              	# -m128bit-long-double -m64 -m80387 -maccumulate-outgoing-args
-  45              	# -malign-stringops -mfancy-math-387 -mfp-ret-in-387 -mfxsr -mglibc
-  46              	# -mieee-fp -mlong-double-80 -mmmx -mno-sse4 -mpush-args -mred-zone -msse
-  47              	# -msse2 -msse3 -mtls-direct-seg-refs
-  48              	
-  49              		.text
-  50              	.Ltext0:
-  51              		.p2align 4,,15
-  52              		.globl	inner
-  54              	inner:
-  55              	.LFB552:
-  56              		.file 1 "ti.c"
+   9              	# -fasynchronous-unwind-tables -fauto-inc-dec -fbranch-count-reg -fcommon
+  10              	# -fdelete-null-pointer-checks -fdwarf2-cfi-asm -fearly-inlining
+  11              	# -feliminate-unused-debug-types -ffunction-cse -fgcse-lm -fgnu-runtime
+  12              	# -fgnu-unique -fident -finline-atomics -fira-hoist-pressure
+  13              	# -fira-share-save-slots -fira-share-spill-slots -fivopts
+  14              	# -fkeep-static-consts -fleading-underscore -fmath-errno
+  15              	# -fmerge-debug-strings -fmove-loop-invariants -fpeephole
+  16              	# -fprefetch-loop-arrays -freg-struct-return
+  17              	# -fsched-critical-path-heuristic -fsched-dep-count-heuristic
+  18              	# -fsched-group-heuristic -fsched-interblock -fsched-last-insn-heuristic
+  19              	# -fsched-rank-heuristic -fsched-spec -fsched-spec-insn-heuristic
+  20              	# -fsched-stalled-insns-dep -fshow-column -fsigned-zeros
+  21              	# -fsplit-ivs-in-unroller -fstack-protector -fstrict-volatile-bitfields
+  22              	# -fsync-libcalls -ftrapping-math -ftree-coalesce-vars -ftree-cselim
+  23              	# -ftree-forwprop -ftree-loop-if-convert -ftree-loop-im -ftree-loop-ivcanon
+  24              	# -ftree-loop-optimize -ftree-parallelize-loops= -ftree-phiprop -ftree-pta
+  25              	# -ftree-reassoc -ftree-scev-cprop -ftree-slp-vectorize
+  26              	# -ftree-vect-loop-version -ftree-vectorize -funit-at-a-time
+  27              	# -funwind-tables -fverbose-asm -fzero-initialized-in-bss
+  28              	# -m128bit-long-double -m64 -m80387 -maccumulate-outgoing-args
+  29              	# -malign-stringops -mfancy-math-387 -mfp-ret-in-387 -mfxsr -mglibc
+  30              	# -mieee-fp -mlong-double-80 -mmmx -mno-sse4 -mpush-args -mred-zone -msse
+  31              	# -msse2 -msse3 -mtls-direct-seg-refs
+  32              	
+  33              		.text
+  34              	.Ltext0:
+  35              		.section	.rodata
+  36              	.LC1:
+  37 0000 73203D20 		.string	"s = %g\n"
+  37      25670A00 
+  38              	.LC2:
+  39 0008 76656374 		.string	"vector s = %g\n"
+  39      6F722073 
+  39      203D2025 
+  39      670A00
+  40              	.LC3:
+  41 0017 76656374 		.string	"vector2 s = %g\n"
+  41      6F723220 
+  41      73203D20 
+  41      25670A00 
+  42              		.text
+  43              		.globl	main
+  45              	main:
+  46              	.LFB496:
+  47              		.file 1 "ti.c"
    1:ti.c          **** #define SIZE 1000
    2:ti.c          **** #include <stdio.h>
    3:ti.c          **** #include <stdlib.h>
@@ -64,97 +62,336 @@
    9:ti.c          **** 
   10:ti.c          **** int main(int argc, char *argv[])
   11:ti.c          ****  {
+  48              		.loc 1 11 0
+  49              		.cfi_startproc
+  50 0000 55       		pushq	%rbp	#
+  51              		.cfi_def_cfa_offset 16
+  52              		.cfi_offset 6, -16
+  53 0001 4889E5   		movq	%rsp, %rbp	#,
+  54              		.cfi_def_cfa_register 6
+  55 0004 4881EC70 		subq	$8048, %rsp	#,
+  55      1F0000
+  56 000b 89BD9CE0 		movl	%edi, -8036(%rbp)	# argc, argc
+  56      FFFF
+  57 0011 4889B590 		movq	%rsi, -8048(%rbp)	# argv, argv
+  57      E0FFFF
   12:ti.c          **** 
   13:ti.c          ****   float __attribute__((aligned (16))) a[SIZE], b[SIZE];
   14:ti.c          ****   float s0, s1, s2;
   15:ti.c          ****   int i,n;
   16:ti.c          **** 
   17:ti.c          ****   for (i = 0; i < SIZE; i++)
+  58              		.loc 1 17 0
+  59 0018 C785ACE0 		movl	$0, -8020(%rbp)	#, i
+  59      FFFF0000 
+  59      0000
+  60 0022 EB35     		jmp	.L2	#
+  61              	.L3:
   18:ti.c          ****    {
   19:ti.c          ****     a[i] = i;
+  62              		.loc 1 19 0 discriminator 2
+                        #####CS540 COMMENT Converts the single doubleword integer to single-precision
+                        #####and places the result in %xmm0
+  63 0024 F30F2A85 		cvtsi2ss	-8020(%rbp), %xmm0	# i, D.4908
+  63      ACE0FFFF 
+  64 002c 8B85ACE0 		movl	-8020(%rbp), %eax	# i, tmp66
+  64      FFFF
+  65 0032 4898     		cltq
+                        #####CS540 COMMENT Move the value in %xmm0 0, a scalar single-precision
+                        #####number, to memory, at %xmm0, -8000(%rbp, %rax, 4)
+  66 0034 F30F1184 		movss	%xmm0, -8000(%rbp,%rax,4)	# D.4908, a
+  66      85C0E0FF 
+  66      FF
   20:ti.c          ****     b[i] = 1;
+  67              		.loc 1 20 0 discriminator 2
+  68 003d 8B85ACE0 		movl	-8020(%rbp), %eax	# i, tmp68
+  68      FFFF
+  69 0043 4863D0   		movslq	%eax, %rdx	# tmp68, tmp67
+  70 0046 8B050000 		movl	.LC0(%rip), %eax	#, tmp69
+  70      0000
+  71 004c 89849560 		movl	%eax, -4000(%rbp,%rdx,4)	# tmp69, b
+  71      F0FFFF
+  17:ti.c          ****    {
+  72              		.loc 1 17 0 discriminator 2
+  73 0053 FF85ACE0 		incl	-8020(%rbp)	# i
+  73      FFFF
+  74              	.L2:
+  17:ti.c          ****    {
+  75              		.loc 1 17 0 is_stmt 0 discriminator 1
+  76 0059 81BDACE0 		cmpl	$999, -8020(%rbp)	#, i
+  76      FFFFE703 
+  76      0000
+  77 0063 7EBF     		jle	.L3	#,
   21:ti.c          ****    }
   22:ti.c          **** 
   23:ti.c          ****   s0 = inner(a,b,n);
+  78              		.loc 1 23 0 is_stmt 1
+  79 0065 8B95B0E0 		movl	-8016(%rbp), %edx	# n, tmp70
+  79      FFFF
+  80 006b 488D8D60 		leaq	-4000(%rbp), %rcx	#, tmp71
+  80      F0FFFF
+  81 0072 488D85C0 		leaq	-8000(%rbp), %rax	#, tmp72
+  81      E0FFFF
+  82 0079 4889CE   		movq	%rcx, %rsi	# tmp71,
+  83 007c 4889C7   		movq	%rax, %rdi	# tmp72,
+  84 007f E8000000 		call	inner	#
+  84      00
+                        #####CS540 COMMENT Move the single-precision scalar from %xmm0 to memory
+                        #####(save the return value)
+  85 0084 F30F1185 		movss	%xmm0, -8040(%rbp)	#, %sfp
+  85      98E0FFFF 
+  86 008c 8B8598E0 		movl	-8040(%rbp), %eax	# %sfp, tmp73
+  86      FFFF
+  87 0092 8985B4E0 		movl	%eax, -8012(%rbp)	# tmp73, s0
+  87      FFFF
   24:ti.c          ****   printf("s = %g\n",s0);
+  88              		.loc 1 24 0
+                        #####CS540 COMMENT Convert the single-precision scalar value in memory
+                        #####to a scalar double and place the result in %xmm0 (This is the argument
+                        #####to printf)
+  89 0098 F30F5A85 		cvtss2sd	-8012(%rbp), %xmm0	# s0, D.4909
+  89      B4E0FFFF 
+  90 00a0 BF000000 		movl	$.LC1, %edi	#,
+  90      00
+  91 00a5 B8010000 		movl	$1, %eax	#,
+  91      00
+  92 00aa E8000000 		call	printf	#
+  92      00
   25:ti.c          **** 
   26:ti.c          ****   s1 = vinner1(a,b,n);
+  93              		.loc 1 26 0
+  94 00af 8B95B0E0 		movl	-8016(%rbp), %edx	# n, tmp74
+  94      FFFF
+  95 00b5 488D8D60 		leaq	-4000(%rbp), %rcx	#, tmp75
+  95      F0FFFF
+  96 00bc 488D85C0 		leaq	-8000(%rbp), %rax	#, tmp76
+  96      E0FFFF
+                        #####CS540 COMMENT (Side note):
+                        #####Paramater order is: %rdi, %rsi, %rdx
+                        #####passing %rdi = %rax = -8000(%rbp) first (a)
+                        #####passing %rsi = %rcx = -4000 (%rbp) second (b)
+                        #####passing %edx = -8016(%rbp) third (n)
+  97 00c3 4889CE   		movq	%rcx, %rsi	# tmp75,
+  98 00c6 4889C7   		movq	%rax, %rdi	# tmp76,
+  99 00c9 B8000000 		movl	$0, %eax	#,
+  99      00
+ 100 00ce E8000000 		call	vinner1	#
+ 100      00
+                        #####CS540 COMMENT Conver the scalar integer in %eax to single-precision
+                        #####and store it as a scalar in %xmm0
+ 101 00d3 F30F2AC0 		cvtsi2ss	%eax, %xmm0	# D.4910, tmp77
+                        #####CS540 COMMENT Move the scalar single-precision value from %xmm0 to memory
+ 102 00d7 F30F1185 		movss	%xmm0, -8008(%rbp)	# tmp77, s1
+ 102      B8E0FFFF 
   27:ti.c          ****   printf("vector s = %g\n",s1);
+ 103              		.loc 1 27 0
+                        #####CS540 Convert the single-precision scalar in memory to a scalar double
+                        #####precision value, and store ther result in %xmm0. (This is the argument
+                        #####to printf.)
+ 104 00df F30F5A85 		cvtss2sd	-8008(%rbp), %xmm0	# s1, D.4909
+ 104      B8E0FFFF 
+ 105 00e7 BF000000 		movl	$.LC2, %edi	#,
+ 105      00
+ 106 00ec B8010000 		movl	$1, %eax	#,
+ 106      00
+ 107 00f1 E8000000 		call	printf	#
+ 107      00
   28:ti.c          **** 
   29:ti.c          ****   s2 = vinner2(a,b,n);
+ 108              		.loc 1 29 0
+ 109 00f6 8B95B0E0 		movl	-8016(%rbp), %edx	# n, tmp78
+ 109      FFFF
+ 110 00fc 488D8D60 		leaq	-4000(%rbp), %rcx	#, tmp79
+ 110      F0FFFF
+ 111 0103 488D85C0 		leaq	-8000(%rbp), %rax	#, tmp80
+ 111      E0FFFF
+ 112 010a 4889CE   		movq	%rcx, %rsi	# tmp79,
+ 113 010d 4889C7   		movq	%rax, %rdi	# tmp80,
+ 114 0110 E8000000 		call	vinner2	#
+ 114      00
+                        #####CS540 COMMENT Store the single scalar single-precision number in %xmm0
+                        #####to memory
+ 115 0115 F30F1185 		movss	%xmm0, -8040(%rbp)	#, %sfp
+ 115      98E0FFFF 
+ 116 011d 8B8598E0 		movl	-8040(%rbp), %eax	# %sfp, tmp81
+ 116      FFFF
+ 117 0123 8985BCE0 		movl	%eax, -8004(%rbp)	# tmp81, s2
+ 117      FFFF
   30:ti.c          ****   printf("vector2 s = %g\n",s2);
+ 118              		.loc 1 30 0
+                        
+                        #####CS540 COMMENT Convert the single-precision scalar in memory and store it
+                        #####as a scalar double in %xmm0. (This is the argument to printf.)
+ 119 0129 F30F5A85 		cvtss2sd	-8004(%rbp), %xmm0	# s2, D.4909
+ 119      BCE0FFFF 
+ 120 0131 BF000000 		movl	$.LC3, %edi	#,
+ 120      00
+ 121 0136 B8010000 		movl	$1, %eax	#,
+ 121      00
+ 122 013b E8000000 		call	printf	#
+ 122      00
   31:ti.c          ****  }
+ 123              		.loc 1 31 0
+ 124 0140 C9       		leave
+ 125              		.cfi_def_cfa 7, 8
+ 126 0141 C3       		ret
+ 127              		.cfi_endproc
+ 128              	.LFE496:
+ 130              		.globl	inner
+ 132              	inner:
+ 133              	.LFB497:
+                   #####CS540 COMMENT - Note that for this function, the SSE instructions will NOT
+                   #####be used. This is because it cannot be guaranteed that there is no memory
+                   #####aliasing between a and b when inner is called. However, SSE instructions
+                   #####are still used, because the compiler was instructed to use the unit,
+                   #####they just process scalars instead of packed values/vectors.
   32:ti.c          **** 
   33:ti.c          **** float inner(float a[], float b[], int n)
   34:ti.c          ****  {
-  57              		.loc 1 34 0
-  58              		.cfi_startproc
-  59              	.LVL0:
+ 134              		.loc 1 34 0
+ 135              		.cfi_startproc
+ 136 0142 55       		pushq	%rbp	#
+ 137              		.cfi_def_cfa_offset 16
+ 138              		.cfi_offset 6, -16
+ 139 0143 4889E5   		movq	%rsp, %rbp	#,
+ 140              		.cfi_def_cfa_register 6
+ 141 0146 48897DE8 		movq	%rdi, -24(%rbp)	# a, a
+ 142 014a 488975E0 		movq	%rsi, -32(%rbp)	# b, b
+ 143 014e 8955DC   		movl	%edx, -36(%rbp)	# n, n
   35:ti.c          ****   int i;
   36:ti.c          ****   float s;
   37:ti.c          **** 
   38:ti.c          ****   s = 0.0;
-  60              		.loc 1 38 0
-  61 0000 0F57C0   		xorps	%xmm0, %xmm0	# s
-  34:ti.c          ****   int i;
-  62              		.loc 1 34 0
-  63 0003 31C0     		xorl	%eax, %eax	# ivtmp.23
-  64              	.LVL1:
-  65              		.p2align 4,,7
-  66 0005 0F1F00   		.p2align 3
-  67              	.L3:
+ 144              		.loc 1 38 0
+ 145 0151 8B050000 		movl	.LC4(%rip), %eax	#, tmp70
+ 145      0000
+ 146 0157 8945FC   		movl	%eax, -4(%rbp)	# tmp70, s
   39:ti.c          ****   for (i = 0; i < SIZE; i++)
+ 147              		.loc 1 39 0
+ 148 015a C745F800 		movl	$0, -8(%rbp)	#, i
+ 148      000000
+ 149 0161 EB45     		jmp	.L5	#
+ 150              	.L6:
   40:ti.c          ****    s += a[i] * b[i];
-  68              		.loc 1 40 0 discriminator 2
-  69 0008 F30F100C 		movss	(%rdi,%rax), %xmm1	# MEM[base: a_5(D), index: ivtmp.23_23, offset: 0B], D.5326
-  69      07
-  70 000d F30F590C 		mulss	(%rsi,%rax), %xmm1	# MEM[base: b_9(D), index: ivtmp.23_23, offset: 0B], D.5326
-  70      06
-  71 0012 4883C004 		addq	$4, %rax	#, ivtmp.23
+ 151              		.loc 1 40 0 discriminator 2
+ 152 0163 8B45F8   		movl	-8(%rbp), %eax	# i, tmp71
+ 153 0166 4898     		cltq
+ 154 0168 488D1485 		leaq	0(,%rax,4), %rdx	#, D.4915
+ 154      00000000 
+ 155 0170 488B45E8 		movq	-24(%rbp), %rax	# a, tmp72
+ 156 0174 4801D0   		addq	%rdx, %rax	# D.4915, D.4916
+                        #####CS540 COMMENT Moves only a single-precision *sclar* to %xmm1
+ 157 0177 F30F1008 		movss	(%rax), %xmm1	# *_8, D.4917
+ 158 017b 8B45F8   		movl	-8(%rbp), %eax	# i, tmp73
+ 159 017e 4898     		cltq
+ 160 0180 488D1485 		leaq	0(,%rax,4), %rdx	#, D.4915
+ 160      00000000 
+ 161 0188 488B45E0 		movq	-32(%rbp), %rax	# b, tmp74
+ 162 018c 4801D0   		addq	%rdx, %rax	# D.4915, D.4916
+                        #####CS540 COMMENT Again moves only a single-precision scalar
+ 163 018f F30F1000 		movss	(%rax), %xmm0	# *_13, D.4917
+                        #####CS540 COMMENT Multiply the single-precision scalars
+ 164 0193 F30F59C1 		mulss	%xmm1, %xmm0	# D.4917, D.4917
+                        #####CS540 COMMENT Load the running sum, a single-precision scalar
+                        #####from memory to %xmm1
+ 165 0197 F30F104D 		movss	-4(%rbp), %xmm1	# s, tmp76
+ 165      FC
+                        #####CS540 COMMENT Add the product scalar and the running sum scalar,
+                        ####and store in %xmm0
+ 166 019c F30F58C1 		addss	%xmm1, %xmm0	# tmp76, tmp75
+                        #####CS540 Finally, store the running sum back to memory
+ 167 01a0 F30F1145 		movss	%xmm0, -4(%rbp)	# tmp75, s
+ 167      FC
   39:ti.c          ****   for (i = 0; i < SIZE; i++)
-  72              		.loc 1 39 0 discriminator 2
-  73 0016 483DA00F 		cmpq	$4000, %rax	#, ivtmp.23
-  73      0000
-  74              		.loc 1 40 0 discriminator 2
-  75 001c F30F58C1 		addss	%xmm1, %xmm0	# D.5326, s
-  76              	.LVL2:
+ 168              		.loc 1 39 0 discriminator 2
+ 169 01a5 FF45F8   		incl	-8(%rbp)	# i
+ 170              	.L5:
   39:ti.c          ****   for (i = 0; i < SIZE; i++)
-  77              		.loc 1 39 0 discriminator 2
-  78 0020 75E6     		jne	.L3	#,
+ 171              		.loc 1 39 0 is_stmt 0 discriminator 1
+ 172 01a8 817DF8E7 		cmpl	$999, -8(%rbp)	#, i
+ 172      030000
+ 173 01af 7EB2     		jle	.L6	#,
   41:ti.c          ****   return s;
+ 174              		.loc 1 41 0 is_stmt 1
+ 175 01b1 8B45FC   		movl	-4(%rbp), %eax	# s, D.4917
   42:ti.c          ****  }
-  79              		.loc 1 42 0
-  80 0022 F3C3     		rep ret
-  81              		.cfi_endproc
-  82              	.LFE552:
-  84              		.section	.rodata.str1.1,"aMS",@progbits,1
-  85              	.LC1:
-  86 0000 25672025 		.string	"%g %g %g %g\n"
-  86      67202567 
-  86      2025670A 
-  86      00
-  87              	.LC2:
-  88 000d 73203D20 		.string	"s = %g\n"
-  88      25670A00 
-  89              		.text
-  90 0024 6666662E 		.p2align 4,,15
-  90      0F1F8400 
-  90      00000000 
-  91              		.globl	vinner
-  93              	vinner:
-  94              	.LFB553:
+ 176              		.loc 1 42 0
+ 177 01b4 8945D8   		movl	%eax, -40(%rbp)	# <retval>, %sfp
+                        #####CS540 COMMENT - Move the final return value to the %xmm0 register
+ 178 01b7 F30F1045 		movss	-40(%rbp), %xmm0	# %sfp,
+ 178      D8
+ 179 01bc 5D       		popq	%rbp	#
+ 180              		.cfi_def_cfa 7, 8
+ 181 01bd C3       		ret
+ 182              		.cfi_endproc
+ 183              	.LFE497:
+ 185              		.section	.rodata
+ 186              	.LC5:
+ 187 0027 25672025 		.string	"%g %g %g %g\n"
+ 187      67202567 
+ 187      2025670A 
+ 187      00
+ 188              		.text
+ 189              		.globl	vinner
+ 191              	vinner:
+ 192              	.LFB498:
   43:ti.c          **** 
   44:ti.c          **** float vinner(float a[], float b[], int n)
   45:ti.c          ****  {
-  95              		.loc 1 45 0
-  96              		.cfi_startproc
-  97              	.LVL3:
-  98 0030 4155     		pushq	%r13	#
-  99              		.cfi_def_cfa_offset 16
- 100              		.cfi_offset 13, -16
- 101              	.LBB46:
- 102              	.LBB47:
- 103              		.file 2 "/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h"
+ 193              		.loc 1 45 0
+ 194              		.cfi_startproc
+ 195 01be 55       		pushq	%rbp	#
+ 196              		.cfi_def_cfa_offset 16
+ 197              		.cfi_offset 6, -16
+ 198 01bf 4889E5   		movq	%rsp, %rbp	#,
+ 199              		.cfi_def_cfa_register 6
+ 200 01c2 4881EC00 		subq	$256, %rsp	#,
+ 200      010000
+ 201 01c9 4889BD18 		movq	%rdi, -232(%rbp)	# a, a
+ 201      FFFFFF
+ 202 01d0 4889B510 		movq	%rsi, -240(%rbp)	# b, b
+ 202      FFFFFF
+ 203 01d7 89950CFF 		movl	%edx, -244(%rbp)	# n, n
+ 203      FFFF
+  46:ti.c          ****   int i,nb;
+  47:ti.c          ****   float s;
+  48:ti.c          ****   float temp[4] __attribute__((aligned(16)));
+  49:ti.c          ****   __m128 v1, v2, acc;
+  50:ti.c          **** 
+  51:ti.c          ****   nb = n - (n % 4);
+ 204              		.loc 1 51 0
+ 205 01dd 8B850CFF 		movl	-244(%rbp), %eax	# n, tmp103
+ 205      FFFF
+ 206 01e3 99       		cltd
+ 207 01e4 C1EA1E   		shrl	$30, %edx	#, tmp105
+ 208 01e7 01D0     		addl	%edx, %eax	# tmp105, tmp106
+ 209 01e9 83E003   		andl	$3, %eax	#, tmp107
+ 210 01ec 29D0     		subl	%edx, %eax	# tmp105, tmp108
+ 211 01ee 8B950CFF 		movl	-244(%rbp), %edx	# n, tmp112
+ 211      FFFF
+ 212 01f4 29C2     		subl	%eax, %edx	# D.4918, tmp111
+ 213 01f6 89D0     		movl	%edx, %eax	# tmp111, tmp111
+ 214 01f8 898534FF 		movl	%eax, -204(%rbp)	# tmp111, nb
+ 214      FFFF
+                        #####CS540 COMMENT Move the aligned packs single-precision values
+                        #####in memory to %xmm0 - moves the acc value to %xmm0
+ 215 01fe 0F288560 		movaps	-160(%rbp), %xmm0	# acc, tmp113
+ 215      FFFFFF
+                        #####CS540 COMMENT  Move the value at %xmm0, aligned, packed, and single-
+                        #####precision, to memory - moves the acc value to another memory location
+ 216 0205 0F294590 		movaps	%xmm0, -112(%rbp)	# tmp113, __A
+
+                        #####CS540 COMMENT Move the value in memory, aligned, packed, and single-
+                        #####precision, to %xmm0 - moves the acc value to %xmm0
+ 217 0209 0F288560 		movaps	-160(%rbp), %xmm0	# acc, tmp114
+ 217      FFFFFF
+
+                        #####CS540 COMMENT  Move the value at %xmm0, aligned, packed, and single-
+                        #####precision, to memory - moves the acc value to another memory location
+ 218 0210 0F2945A0 		movaps	%xmm0, -96(%rbp)	# tmp114, __B
+ 219              	.LBB30:
+ 220              	.LBB31:
+ 221              		.file 2 "/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h"
    1:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** /* Copyright (C) 2002-2013 Free Software Foundation, Inc.
    2:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** 
    3:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h ****    This file is part of GCC.
@@ -386,91 +623,47 @@
  229:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** _mm_xor_ps (__m128 __A, __m128 __B)
  230:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** {
  231:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h ****   return __builtin_ia32_xorps (__A, __B);
- 104              		.loc 2 231 0
- 105 0032 0F57C9   		xorps	%xmm1, %xmm1	# acc
- 106              	.LBE47:
- 107              	.LBE46:
- 108              		.loc 1 45 0
- 109 0035 4154     		pushq	%r12	#
- 110              		.cfi_def_cfa_offset 24
- 111              		.cfi_offset 12, -24
- 112 0037 4189D4   		movl	%edx, %r12d	# n, n
-  46:ti.c          ****   int i,nb;
-  47:ti.c          ****   float s;
-  48:ti.c          ****   float temp[4] __attribute__((aligned(16)));
-  49:ti.c          ****   __m128 v1, v2, acc;
-  50:ti.c          **** 
-  51:ti.c          ****   nb = n - (n % 4);
- 113              		.loc 1 51 0
- 114 003a C1FA1F   		sarl	$31, %edx	#, tmp123
- 115              	.LVL4:
- 116 003d C1EA1E   		shrl	$30, %edx	#, tmp123
- 117 0040 4589E5   		movl	%r12d, %r13d	# n, i
- 118 0043 418D0414 		leal	(%r12,%rdx), %eax	#, D.5343
-  45:ti.c          ****   int i,nb;
- 119              		.loc 1 45 0
- 120 0047 55       		pushq	%rbp	#
- 121              		.cfi_def_cfa_offset 32
- 122              		.cfi_offset 6, -32
- 123 0048 4889FD   		movq	%rdi, %rbp	# a, a
- 124              		.loc 1 51 0
- 125 004b 83E003   		andl	$3, %eax	#, D.5343
-  45:ti.c          ****   int i,nb;
- 126              		.loc 1 45 0
- 127 004e 53       		pushq	%rbx	#
- 128              		.cfi_def_cfa_offset 40
- 129              		.cfi_offset 3, -40
- 130 004f 4889F3   		movq	%rsi, %rbx	# b, b
- 131              		.loc 1 51 0
- 132 0052 29D0     		subl	%edx, %eax	# tmp123, D.5343
- 133 0054 4129C5   		subl	%eax, %r13d	# D.5343, i
- 134              	.LVL5:
-  45:ti.c          ****   int i,nb;
- 135              		.loc 1 45 0
- 136 0057 4883EC28 		subq	$40, %rsp	#,
- 137              		.cfi_def_cfa_offset 80
+ 222              		.loc 2 231 0
+                        #####CS540 COMMENT Move the aligned pakced single-precision values from memory
+                        #####to %xmm0 - place one instance of acc in %xmm0
+ 223 0214 0F2845A0 		movaps	-96(%rbp), %xmm0	# __B, tmp115
+                        #####CS540 COMMENT Move the aligned pakced single-precision values from memory
+                        #####to %xmm1 - place another instance of acc in %xm1
+ 224 0218 0F284D90 		movaps	-112(%rbp), %xmm1	# __A, tmp116
+                        #####CS540 COMMENT xor together the values in %xmm1 and %xmm0 as packed
+                        #####single-precision values - xor'ing acc with itself, so zeroing it
+ 225 021c 0F57C1   		xorps	%xmm1, %xmm0	# tmp116, D.4924
+ 226              	.LBE31:
+ 227              	.LBE30:
   52:ti.c          ****   acc = _mm_xor_ps(acc,acc);
+ 228              		.loc 1 52 0
+                        #####CS540 COMMENT Store the result of the xor back to memory, at acc, as
+                        #####an aligned packed single-precision number
+ 229 021f 0F298560 		movaps	%xmm0, -160(%rbp)	# D.4847, acc
+ 229      FFFFFF
   53:ti.c          ****   for (i = 0; i < nb; i += 4)
- 138              		.loc 1 53 0
- 139 005b 4585ED   		testl	%r13d, %r13d	# i
- 140 005e 7E25     		jle	.L6	#,
- 141 0060 418D4DFF 		leal	-1(%r13), %ecx	#, D.5346
- 142 0064 31C0     		xorl	%eax, %eax	# ivtmp.40
- 143 0066 C1E902   		shrl	$2, %ecx	#,
- 144 0069 48FFC1   		incq	%rcx	# D.5347
- 145 006c 48C1E104 		salq	$4, %rcx	#, D.5347
- 146              	.LVL6:
- 147              		.p2align 4,,7
- 148              		.p2align 3
- 149              	.L7:
- 150              	.LBB48:
- 151              	.LBB49:
- 169:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
- 152              		.loc 2 169 0 discriminator 2
- 153 0070 0F284405 		movaps	0(%rbp,%rax), %xmm0	# MEM[base: a_11(D), index: ivtmp.40_58, offset: 0B], tmp132
- 153      00
- 154 0075 0F590403 		mulps	(%rbx,%rax), %xmm0	# MEM[base: b_14(D), index: ivtmp.40_58, offset: 0B], tmp132
- 155              	.LVL7:
- 156 0079 4883C010 		addq	$16, %rax	#, ivtmp.40
- 157              	.LVL8:
- 158              	.LBE49:
- 159              	.LBE48:
- 160              		.loc 1 53 0 discriminator 2
- 161 007d 4839C8   		cmpq	%rcx, %rax	# D.5347, ivtmp.40
- 162              	.LBB50:
- 163              	.LBB51:
- 157:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
- 164              		.loc 2 157 0 discriminator 2
- 165 0080 0F58C8   		addps	%xmm0, %xmm1	# tmp132, acc
- 166              	.LVL9:
- 167              	.LBE51:
- 168              	.LBE50:
- 169              		.loc 1 53 0 discriminator 2
- 170 0083 75EB     		jne	.L7	#,
- 171              	.LVL10:
- 172              	.L6:
- 173              	.LBB52:
- 174              	.LBB53:
+ 230              		.loc 1 53 0
+ 231 0226 C7852CFF 		movl	$0, -212(%rbp)	#, i
+ 231      FFFF0000 
+ 231      0000
+ 232 0230 E9AF0000 		jmp	.L10	#
+ 232      00
+ 233              	.L15:
+  54:ti.c          ****    {
+  55:ti.c          ****     v1 = _mm_load_ps(&a[i]);
+ 234              		.loc 1 55 0 discriminator 2
+ 235 0235 8B852CFF 		movl	-212(%rbp), %eax	# i, tmp117
+ 235      FFFF
+ 236 023b 4898     		cltq
+ 237 023d 488D1485 		leaq	0(,%rax,4), %rdx	#, D.4919
+ 237      00000000 
+ 238 0245 488B8518 		movq	-232(%rbp), %rax	# a, tmp118
+ 238      FFFFFF
+ 239 024c 4801D0   		addq	%rdx, %rax	# D.4919, D.4920
+ 240 024f 48898538 		movq	%rax, -200(%rbp)	# D.4920, __P
+ 240      FFFFFF
+ 241              	.LBB32:
+ 242              	.LBB33:
  232:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
  233:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** 
  234:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** /* Perform a comparison on the lower SPFP values of A and B.  If the
@@ -1138,6 +1331,126 @@
  896:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** _mm_load_ps (float const *__P)
  897:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** {
  898:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h ****   return (__m128) *(__v4sf *)__P;
+ 243              		.loc 2 898 0 discriminator 2
+ 244 0256 488B8538 		movq	-200(%rbp), %rax	# __P, tmp119
+ 244      FFFFFF
+                        #####CS540 COMMENT Move the aligned packed single-precision numbers at %(rax)
+                        #####to %xmm0 - moving four values of a into %xmm0
+ 245 025d 0F2800   		movaps	(%rax), %xmm0	# MEM[(__v4sf *)__P_58], D.4924
+ 246              	.LBE33:
+ 247              	.LBE32:
+ 248              		.loc 1 55 0 discriminator 2
+                        #####CS540 COMMENT Move the values just moved from memory to another place in
+                        #####memory - moving a into v1
+ 249 0260 0F298570 		movaps	%xmm0, -144(%rbp)	# D.4851, v1
+ 249      FFFFFF
+  56:ti.c          ****     v2 = _mm_load_ps(&b[i]);
+ 250              		.loc 1 56 0 discriminator 2
+ 251 0267 8B852CFF 		movl	-212(%rbp), %eax	# i, tmp120
+ 251      FFFF
+ 252 026d 4898     		cltq
+ 253 026f 488D1485 		leaq	0(,%rax,4), %rdx	#, D.4919
+ 253      00000000 
+                        #####CS540 COMMENT Move the pointer value of b into %rax
+ 254 0277 488B8510 		movq	-240(%rbp), %rax	# b, tmp121
+ 254      FFFFFF
+ 255 027e 4801D0   		addq	%rdx, %rax	# D.4919, D.4920
+ 256 0281 48898540 		movq	%rax, -192(%rbp)	# D.4920, __P
+ 256      FFFFFF
+ 257              	.LBB34:
+ 258              	.LBB35:
+ 259              		.loc 2 898 0 discriminator 2
+ 260 0288 488B8540 		movq	-192(%rbp), %rax	# __P, tmp122
+ 260      FFFFFF
+                        ######CS540 COMMENT Move four values of b into %xmm0
+ 261 028f 0F2800   		movaps	(%rax), %xmm0	# MEM[(__v4sf *)__P_60], D.4924
+ 262              	.LBE35:
+ 263              	.LBE34:
+ 264              		.loc 1 56 0 discriminator 2
+                        #####CS540 COMMENT Move the value from %xmm0 back to memory, moving b to v2
+ 265 0292 0F294580 		movaps	%xmm0, -128(%rbp)	# D.4855, v2
+
+                        #####CS540 COMMENT Move the four packed single-precision values of v1 into
+                        #####%xmm0 (also the values of a)
+ 266 0296 0F288570 		movaps	-144(%rbp), %xmm0	# v1, tmp123
+ 266      FFFFFF
+                        #####CS540 COMMENT Move the values back to memory
+ 267 029d 0F2945B0 		movaps	%xmm0, -80(%rbp)	# tmp123, __A
+
+                        #####CS540 COMMENT Move the four packed single-precision values of v2 into
+                        #####%xmm0 (also the values of b)
+ 268 02a1 0F284580 		movaps	-128(%rbp), %xmm0	# v2, tmp124
+
+                        #####CS540 COMMENT Move the values back to memory
+ 269 02a5 0F2945C0 		movaps	%xmm0, -64(%rbp)	# tmp124, __B
+ 270              	.LBB36:
+ 271              	.LBB37:
+ 169:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
+ 272              		.loc 2 169 0 discriminator 2
+                        #####CS540 COMMENT Move v2 (which contains four b values) into %xmm0, then
+                        #####do the same for v1 (which contains four a values)
+ 273 02a9 0F2845C0 		movaps	-64(%rbp), %xmm0	# __B, tmp125
+ 274 02ad 0F284DB0 		movaps	-80(%rbp), %xmm1	# __A, tmp126
+
+                        ######CS540 COMMENT Multiply the four values of v1 and v2 (a and b)
+ 275 02b1 0F59C1   		mulps	%xmm1, %xmm0	# tmp126, D.4924
+ 276              	.LBE37:
+ 277              	.LBE36:
+  57:ti.c          ****     v2 = _mm_mul_ps(v1,v2);
+ 278              		.loc 1 57 0 discriminator 2
+
+                        #####CS540 COMMENT Store the result of the multiplication back to v2
+ 279 02b4 0F294580 		movaps	%xmm0, -128(%rbp)	# D.4860, v2
+                        #####CS540 COMMENT Move the accumlator variable into the %xmm0 register
+ 280 02b8 0F288560 		movaps	-160(%rbp), %xmm0	# acc, tmp127
+ 280      FFFFFF
+                        #####CS540 COMMENT Store the value of the accumulator back in memory
+ 281 02bf 0F2945D0 		movaps	%xmm0, -48(%rbp)	# tmp127, __A
+                        #####CS540 COMMENT Load the value of v2 into %xmm0
+ 282 02c3 0F284580 		movaps	-128(%rbp), %xmm0	# v2, tmp128
+                        #####CS540 COMMENT Store the four values of v2 back into memory
+ 283 02c7 0F2945E0 		movaps	%xmm0, -32(%rbp)	# tmp128, __B
+ 284              	.LBB38:
+ 285              	.LBB39:
+ 157:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
+ 286              		.loc 2 157 0 discriminator 2
+                        #####CS540 COMMENT Move the value of v2 into the %xmm0 SSE register
+ 287 02cb 0F2845E0 		movaps	-32(%rbp), %xmm0	# __B, tmp129
+                        #####CS540 COMMENT Move the value of the accumulator into the %xmm1 register
+ 288 02cf 0F284DD0 		movaps	-48(%rbp), %xmm1	# __A, tmp130
+                        #####CS540 COMMENT Add the value of v2 to the accumulator, and store in %xmm0
+ 289 02d3 0F58C1   		addps	%xmm1, %xmm0	# tmp130, D.4924
+ 290              	.LBE39:
+ 291              	.LBE38:
+  58:ti.c          ****     acc = _mm_add_ps(acc,v2);
+ 292              		.loc 1 58 0 discriminator 2
+                        #####CS6540 COMMENT Store the result of the addition back to the acc
+ 293 02d6 0F298560 		movaps	%xmm0, -160(%rbp)	# D.4865, acc
+ 293      FFFFFF
+  53:ti.c          ****    {
+ 294              		.loc 1 53 0 discriminator 2
+ 295 02dd 83852CFF 		addl	$4, -212(%rbp)	#, i
+ 295      FFFF04
+ 296              	.L10:
+  53:ti.c          ****    {
+ 297              		.loc 1 53 0 is_stmt 0 discriminator 1
+ 298 02e4 8B852CFF 		movl	-212(%rbp), %eax	# i, tmp131
+ 298      FFFF
+ 299 02ea 3B8534FF 		cmpl	-204(%rbp), %eax	# nb, tmp131
+ 299      FFFF
+ 300 02f0 0F8C3FFF 		jl	.L15	#,
+ 300      FFFF
+ 301 02f6 488D8550 		leaq	-176(%rbp), %rax	#, tmp132
+ 301      FFFFFF
+ 302 02fd 48898548 		movq	%rax, -184(%rbp)	# tmp132, __P
+ 302      FFFFFF
+                        #####CS540 COMMENT Move the accumlator value into %xmm0
+ 303 0304 0F288560 		movaps	-160(%rbp), %xmm0	# acc, tmp133
+ 303      FFFFFF
+                        #####CS540 COMMENT Store the acc value back to memory
+ 304 030b 0F2945F0 		movaps	%xmm0, -16(%rbp)	# tmp133, __A
+ 305              	.LBB40:
+ 306              	.LBB41:
  899:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
  900:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** 
  901:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** /* Load four SPFP values from P.  The address need not be 16-byte aligned.  */
@@ -1187,707 +1500,545 @@
  945:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** _mm_store_ps (float *__P, __m128 __A)
  946:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** {
  947:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h ****   *(__v4sf *)__P = (__v4sf)__A;
- 175              		.loc 2 947 0
- 176 0085 0F290C24 		movaps	%xmm1, (%rsp)	# acc, %sfp
- 177              	.LBE53:
- 178              	.LBE52:
-  54:ti.c          ****    {
-  55:ti.c          ****     v1 = _mm_load_ps(&a[i]);
-  56:ti.c          ****     v2 = _mm_load_ps(&b[i]);
-  57:ti.c          ****     v2 = _mm_mul_ps(v1,v2);
-  58:ti.c          ****     acc = _mm_add_ps(acc,v2);
+ 307              		.loc 2 947 0 is_stmt 1
+ 308 030f 488B8548 		movq	-184(%rbp), %rax	# __P, tmp134
+ 308      FFFFFF
+                        #####CS540 COMMENT Move the value of acc back into %xmm0
+ 309 0316 0F2845F0 		movaps	-16(%rbp), %xmm0	# __A, tmp135
+                        #####CS540 COMMENT Store %xmm0 back into the memory location of %rax, as
+                        #####aligned packed single-precision numbers
+ 310 031a 0F2900   		movaps	%xmm0, (%rax)	# tmp135, MEM[(__v4sf *)__P_68]
+ 311              	.LBE41:
+ 312              	.LBE40:
   59:ti.c          ****    }
   60:ti.c          ****   _mm_store_ps(temp,acc);
   61:ti.c          ****   printf("%g %g %g %g\n",temp[0],temp[1],temp[2],temp[3]);
- 179              		.loc 1 61 0
- 180 0089 488B4424 		movq	8(%rsp), %rax	# %sfp, tmp136
- 180      08
- 181 008e 4889C6   		movq	%rax, %rsi	# tmp136, tmp163
- 182 0091 48C1EE20 		shrq	$32, %rsi	#, tmp163
- 183 0095 89742414 		movl	%esi, 20(%rsp)	# tmp138, %sfp
- 184              	.LBB54:
- 185              	.LBB55:
- 186              		.file 3 "/usr/include/x86_64-linux-gnu/bits/stdio2.h"
-   1:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** /* Checking macros for stdio functions.
-   2:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    Copyright (C) 2004-2014 Free Software Foundation, Inc.
-   3:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    This file is part of the GNU C Library.
-   4:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-   5:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    The GNU C Library is free software; you can redistribute it and/or
-   6:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    modify it under the terms of the GNU Lesser General Public
-   7:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    License as published by the Free Software Foundation; either
-   8:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    version 2.1 of the License, or (at your option) any later version.
-   9:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  10:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    The GNU C Library is distributed in the hope that it will be useful,
-  11:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    but WITHOUT ANY WARRANTY; without even the implied warranty of
-  12:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-  13:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    Lesser General Public License for more details.
-  14:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  15:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    You should have received a copy of the GNU Lesser General Public
-  16:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    License along with the GNU C Library; if not, see
-  17:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****    <http://www.gnu.org/licenses/>.  */
-  18:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  19:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** #ifndef _STDIO_H
-  20:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** # error "Never include <bits/stdio2.h> directly; use <stdio.h> instead."
-  21:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** #endif
-  22:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  23:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** extern int __sprintf_chk (char *__restrict __s, int __flag, size_t __slen,
-  24:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			  const char *__restrict __format, ...) __THROW;
-  25:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** extern int __vsprintf_chk (char *__restrict __s, int __flag, size_t __slen,
-  26:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			   const char *__restrict __format,
-  27:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			   _G_va_list __ap) __THROW;
-  28:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  29:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** #ifdef __va_arg_pack
-  30:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** __fortify_function int
-  31:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** __NTH (sprintf (char *__restrict __s, const char *__restrict __fmt, ...))
-  32:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** {
-  33:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
-  34:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 				  __bos (__s), __fmt, __va_arg_pack ());
-  35:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** }
-  36:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** #elif !defined __cplusplus
-  37:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** # define sprintf(str, ...) \
-  38:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****   __builtin___sprintf_chk (str, __USE_FORTIFY_LEVEL - 1, __bos (str), \
-  39:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			   __VA_ARGS__)
-  40:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** #endif
-  41:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  42:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** __fortify_function int
-  43:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** __NTH (vsprintf (char *__restrict __s, const char *__restrict __fmt,
-  44:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 		 _G_va_list __ap))
-  45:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** {
-  46:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****   return __builtin___vsprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
-  47:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 				   __bos (__s), __fmt, __ap);
-  48:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** }
-  49:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  50:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** #if defined __USE_BSD || defined __USE_ISOC99 || defined __USE_UNIX98
-  51:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  52:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** extern int __snprintf_chk (char *__restrict __s, size_t __n, int __flag,
-  53:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			   size_t __slen, const char *__restrict __format,
-  54:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			   ...) __THROW;
-  55:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** extern int __vsnprintf_chk (char *__restrict __s, size_t __n, int __flag,
-  56:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			    size_t __slen, const char *__restrict __format,
-  57:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			    _G_va_list __ap) __THROW;
-  58:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  59:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** # ifdef __va_arg_pack
-  60:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** __fortify_function int
-  61:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** __NTH (snprintf (char *__restrict __s, size_t __n,
-  62:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 		 const char *__restrict __fmt, ...))
-  63:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** {
-  64:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
-  65:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 				   __bos (__s), __fmt, __va_arg_pack ());
-  66:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** }
-  67:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** # elif !defined __cplusplus
-  68:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** #  define snprintf(str, len, ...) \
-  69:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****   __builtin___snprintf_chk (str, len, __USE_FORTIFY_LEVEL - 1, __bos (str), \
-  70:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			    __VA_ARGS__)
-  71:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** # endif
-  72:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  73:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** __fortify_function int
-  74:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** __NTH (vsnprintf (char *__restrict __s, size_t __n,
-  75:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 		  const char *__restrict __fmt, _G_va_list __ap))
-  76:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** {
-  77:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****   return __builtin___vsnprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
-  78:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 				    __bos (__s), __fmt, __ap);
-  79:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** }
-  80:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  81:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** #endif
-  82:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  83:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** #if __USE_FORTIFY_LEVEL > 1
-  84:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  85:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** extern int __fprintf_chk (FILE *__restrict __stream, int __flag,
-  86:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			  const char *__restrict __format, ...);
-  87:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** extern int __printf_chk (int __flag, const char *__restrict __format, ...);
-  88:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** extern int __vfprintf_chk (FILE *__restrict __stream, int __flag,
-  89:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			   const char *__restrict __format, _G_va_list __ap);
-  90:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** extern int __vprintf_chk (int __flag, const char *__restrict __format,
-  91:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			  _G_va_list __ap);
-  92:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
-  93:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** # ifdef __va_arg_pack
-  94:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** __fortify_function int
-  95:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** fprintf (FILE *__restrict __stream, const char *__restrict __fmt, ...)
-  96:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** {
-  97:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****   return __fprintf_chk (__stream, __USE_FORTIFY_LEVEL - 1, __fmt,
-  98:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 			__va_arg_pack ());
-  99:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** }
- 100:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** 
- 101:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** __fortify_function int
- 102:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** printf (const char *__restrict __fmt, ...)
- 103:/usr/include/x86_64-linux-gnu/bits/stdio2.h **** {
- 104:/usr/include/x86_64-linux-gnu/bits/stdio2.h ****   return __printf_chk (__USE_FORTIFY_LEVEL - 1, __fmt, __va_arg_pack ());
- 187              		.loc 3 104 0
- 188 0099 BE000000 		movl	$.LC1, %esi	#,
- 188      00
- 189              	.LBE55:
- 190              	.LBE54:
- 191              		.loc 1 61 0
- 192 009e F30F1064 		movss	20(%rsp), %xmm4	# %sfp, D.5344
- 192      2414
- 193 00a4 89442414 		movl	%eax, 20(%rsp)	# tmp140, %sfp
- 194 00a8 488B0424 		movq	(%rsp), %rax	# %sfp, temp
- 195              	.LVL11:
- 196 00ac F30F106C 		movss	20(%rsp), %xmm5	# %sfp, D.5344
- 196      2414
- 197              	.LBB62:
- 198              	.LBB56:
- 199              		.loc 3 104 0
- 200 00b2 F30F5ADC 		cvtss2sd	%xmm4, %xmm3	# D.5344,
- 201 00b6 F30F5AD5 		cvtss2sd	%xmm5, %xmm2	# D.5344,
- 202              	.LBE56:
- 203              	.LBE62:
- 204              		.loc 1 61 0
- 205 00ba 4889C7   		movq	%rax, %rdi	# temp, tmp166
- 206              	.LVL12:
- 207              	.LBB63:
- 208              	.LBB57:
- 209              		.loc 3 104 0
- 210 00bd F30F1164 		movss	%xmm4, 24(%rsp)	# D.5344, %sfp
- 210      2418
- 211              	.LBE57:
- 212              	.LBE63:
- 213              		.loc 1 61 0
- 214 00c3 48C1EF20 		shrq	$32, %rdi	#, tmp166
- 215 00c7 893C24   		movl	%edi, (%rsp)	# tmp143, %sfp
- 216              	.LBB64:
- 217              	.LBB58:
- 218              		.loc 3 104 0
- 219 00ca BF010000 		movl	$1, %edi	#,
- 219      00
- 220              	.LBE58:
- 221              	.LBE64:
- 222              		.loc 1 61 0
- 223 00cf F30F1034 		movss	(%rsp), %xmm6	# %sfp, D.5344
- 223      24
- 224 00d4 890424   		movl	%eax, (%rsp)	# temp, %sfp
- 225              	.LBB65:
- 226              	.LBB59:
- 227              		.loc 3 104 0
- 228 00d7 B8040000 		movl	$4, %eax	#,
- 228      00
- 229              	.LBE59:
- 230              	.LBE65:
- 231              		.loc 1 61 0
- 232 00dc F30F103C 		movss	(%rsp), %xmm7	# %sfp, D.5344
- 232      24
- 233              	.LVL13:
- 234 00e1 F30F5AC7 		cvtss2sd	%xmm7, %xmm0	# D.5344, D.5345
- 235              	.LBB66:
- 236              	.LBB60:
- 237              		.loc 3 104 0
- 238 00e5 F30F5ACE 		cvtss2sd	%xmm6, %xmm1	# D.5344,
- 239              	.LVL14:
- 240              	.LBE60:
- 241              	.LBE66:
- 242              		.loc 1 61 0
- 243 00e9 F30F117C 		movss	%xmm7, 28(%rsp)	# D.5344, %sfp
- 243      241C
- 244              	.LBB67:
- 245              	.LBB61:
- 246              		.loc 3 104 0
- 247 00ef F30F1134 		movss	%xmm6, (%rsp)	# D.5344, %sfp
- 247      24
- 248 00f4 E8000000 		call	__printf_chk	#
- 248      00
- 249              	.LVL15:
- 250              	.LBE61:
- 251              	.LBE67:
+ 313              		.loc 1 61 0
+
+						#####In the following section, set up the arguments to printf
+                        ###########################################################################
+                        #####CS540 COMMENT Move the single scalar of temp into %xmm0
+ 314 031d F30F1085 		movss	-164(%rbp), %xmm0	# temp, D.4921
+                        #####CS540 COMMENT Convert the single scalar to a double scalar in %xmm3
+ 315 0325 F30F5AD8 		cvtss2sd	%xmm0, %xmm3	# D.4921, D.4922
+
+                        #####CS540 COMMENT Move the single scalar of temp int %xmm0
+ 316 0329 F30F1085 		movss	-168(%rbp), %xmm0	# temp, D.4921
+ 316      58FFFFFF      #####CS540 COMMENT Convert the single scalar to a double scalar in %xmm2
+ 317 0331 F30F5AD0 		cvtss2sd	%xmm0, %xmm2	# D.4921, D.4922
+
+                        #####CS540 COMMENT Move the single scalar of temp into %xmm0
+ 318 0335 F30F1085 		movss	-172(%rbp), %xmm0	# temp, D.4921
+ 318      54FFFFFF      #####CS540 COMMENT Convert the single scalar to a double scalar in %xmm1
+ 319 033d F30F5AC8 		cvtss2sd	%xmm0, %xmm1	# D.4921, D.4922
+
+                        #####CS540 COMMENT Again, move and convert a value of temp (temp 0)
+ 320 0341 F30F1085 		movss	-176(%rbp), %xmm0	# temp, D.4921
+ 320      50FFFFFF 
+ 321 0349 F30F5AC0 		cvtss2sd	%xmm0, %xmm0	# D.4921, D.4922
+ 322 034d BF000000 		movl	$.LC5, %edi	#,
+ 322      00
+ 323 0352 B8040000 		movl	$4, %eax	#,
+ 323      00
+ 324 0357 E8000000 		call	printf	#
+                        #####Finished setting up arguments and then called printf##################
+ 324      00
   62:ti.c          ****   s = 0.0;
+ 325              		.loc 1 62 0
+ 326 035c 8B050000 		movl	.LC4(%rip), %eax	#, tmp136
+ 326      0000
+ 327 0362 898530FF 		movl	%eax, -208(%rbp)	# tmp136, s
+ 327      FFFF
   63:ti.c          ****   for (i = nb; i < n; i++)
- 252              		.loc 1 63 0
- 253 00f9 4539EC   		cmpl	%r13d, %r12d	# i, n
-  62:ti.c          ****   s = 0.0;
- 254              		.loc 1 62 0
- 255 00fc 0F57C0   		xorps	%xmm0, %xmm0	# s
- 256              		.loc 1 63 0
- 257 00ff F30F1034 		movss	(%rsp), %xmm6	# %sfp, D.5344
- 257      24
- 258 0104 F30F106C 		movss	20(%rsp), %xmm5	# %sfp, D.5344
- 258      2414
- 259 010a F30F1064 		movss	24(%rsp), %xmm4	# %sfp, D.5344
- 259      2418
- 260 0110 F30F107C 		movss	28(%rsp), %xmm7	# %sfp, D.5344
- 260      241C
- 261 0116 7E38     		jle	.L8	#,
- 262 0118 41FFCC   		decl	%r12d	# D.5346
- 263              	.LVL16:
-  62:ti.c          ****   s = 0.0;
- 264              		.loc 1 62 0
- 265 011b 0F57C0   		xorps	%xmm0, %xmm0	# s
- 266 011e 4529EC   		subl	%r13d, %r12d	# i, D.5347
- 267              	.LVL17:
- 268 0121 4D63ED   		movslq	%r13d, %r13	# i, D.5347
- 269              	.LVL18:
- 270              		.loc 1 63 0
- 271 0124 31C0     		xorl	%eax, %eax	# ivtmp.33
- 272 0126 49C1E502 		salq	$2, %r13	#, D.5347
- 273              	.LVL19:
- 274 012a 4A8D14A5 		leaq	4(,%r12,4), %rdx	#, D.5347
- 274      04000000 
- 275 0132 4C01ED   		addq	%r13, %rbp	# D.5347, D.5349
- 276              	.LVL20:
- 277 0135 4C01EB   		addq	%r13, %rbx	# D.5347, D.5349
- 278              	.LVL21:
- 279              		.p2align 4,,7
- 280              		.p2align 3
- 281              	.L9:
+ 328              		.loc 1 63 0
+ 329 0368 8B8534FF 		movl	-204(%rbp), %eax	# nb, tmp137
+ 329      FFFF
+ 330 036e 89852CFF 		movl	%eax, -212(%rbp)	# tmp137, i
+ 330      FFFF
+ 331 0374 EB5A     		jmp	.L16	#
+ 332              	.L17:
   64:ti.c          ****    s += a[i] * b[i];
- 282              		.loc 1 64 0 discriminator 2
- 283 0138 F30F104C 		movss	0(%rbp,%rax), %xmm1	# MEM[base: _90, index: ivtmp.33_94, offset: 0B], D.5344
- 283      0500
- 284 013e F30F590C 		mulss	(%rbx,%rax), %xmm1	# MEM[base: _87, index: ivtmp.33_94, offset: 0B], D.5344
- 284      03
- 285 0143 4883C004 		addq	$4, %rax	#, ivtmp.33
-  63:ti.c          ****    s += a[i] * b[i];
- 286              		.loc 1 63 0 discriminator 2
- 287 0147 4839D0   		cmpq	%rdx, %rax	# D.5347, ivtmp.33
- 288              		.loc 1 64 0 discriminator 2
- 289 014a F30F58C1 		addss	%xmm1, %xmm0	# D.5344, s
- 290              	.LVL22:
-  63:ti.c          ****    s += a[i] * b[i];
- 291              		.loc 1 63 0 discriminator 2
- 292 014e 75E8     		jne	.L9	#,
- 293              	.LVL23:
- 294              	.L8:
+ 333              		.loc 1 64 0 discriminator 2
+ 334 0376 8B852CFF 		movl	-212(%rbp), %eax	# i, tmp138
+ 334      FFFF
+ 335 037c 4898     		cltq
+ 336 037e 488D1485 		leaq	0(,%rax,4), %rdx	#, D.4919
+ 336      00000000 
+ 337 0386 488B8518 		movq	-232(%rbp), %rax	# a, tmp139
+ 337      FFFFFF
+ 338 038d 4801D0   		addq	%rdx, %rax	# D.4919, D.4923
+                        #####CS540 COMMENT Move the single precision scalar %rax points at into %xmm1
+                        #####(this is one of the "remainder" values of a)
+ 339 0390 F30F1008 		movss	(%rax), %xmm1	# *_36, D.4921
+ 340 0394 8B852CFF 		movl	-212(%rbp), %eax	# i, tmp140
+ 340      FFFF
+ 341 039a 4898     		cltq
+ 342 039c 488D1485 		leaq	0(,%rax,4), %rdx	#, D.4919
+ 342      00000000 
+ 343 03a4 488B8510 		movq	-240(%rbp), %rax	# b, tmp141
+ 343      FFFFFF
+ 344 03ab 4801D0   		addq	%rdx, %rax	# D.4919, D.4923
+                        
+                        #####CS540 COMMENT Move the single precision scalar %rax points at into %xmm0
+                        #####(this is one of the "remainder" values of b)
+ 345 03ae F30F1000 		movss	(%rax), %xmm0	# *_40, D.4921
+
+                        #####CS540 COMMENT Multiply the two scalars loaded from a and b
+ 346 03b2 F30F59C1 		mulss	%xmm1, %xmm0	# D.4921, D.4921
+
+                        #####CS540 COMMENT Move the value of the scalar accumulating variable s
+                        #####into %xmm1
+ 347 03b6 F30F108D 		movss	-208(%rbp), %xmm1	# s, tmp143
+ 347      30FFFFFF 
+                        #####CS540 COMMENT Add the product to the running sum, as scalars
+ 348 03be F30F58C1 		addss	%xmm1, %xmm0	# tmp143, tmp142
+                        #####CS540 COMMENT Store the result of the addition back to memory, at s
+ 349 03c2 F30F1185 		movss	%xmm0, -208(%rbp)	# tmp142, s
+ 349      30FFFFFF 
+  63:ti.c          ****   for (i = nb; i < n; i++)
+ 350              		.loc 1 63 0 discriminator 2
+ 351 03ca FF852CFF 		incl	-212(%rbp)	# i
+ 351      FFFF
+ 352              	.L16:
+  63:ti.c          ****   for (i = nb; i < n; i++)
+ 353              		.loc 1 63 0 is_stmt 0 discriminator 1
+ 354 03d0 8B852CFF 		movl	-212(%rbp), %eax	# i, tmp144
+ 354      FFFF
+ 355 03d6 3B850CFF 		cmpl	-244(%rbp), %eax	# n, tmp144
+ 355      FFFF
+ 356 03dc 7C98     		jl	.L17	#,
   65:ti.c          ****   s = s + temp[0] + temp[1] + temp[2] + temp[3];
- 295              		.loc 1 65 0
- 296 0150 F30F58C7 		addss	%xmm7, %xmm0	# D.5344, s
- 297              	.LBB68:
- 298              	.LBB69:
- 299              		.loc 3 104 0
- 300 0154 BE000000 		movl	$.LC2, %esi	#,
- 300      00
- 301 0159 BF010000 		movl	$1, %edi	#,
- 301      00
- 302 015e B8010000 		movl	$1, %eax	#,
- 302      00
- 303              	.LBE69:
- 304              	.LBE68:
- 305              		.loc 1 65 0
- 306 0163 0F28C8   		movaps	%xmm0, %xmm1	# s, s
- 307 0166 F30F58CE 		addss	%xmm6, %xmm1	# D.5344, s
- 308 016a F30F58CD 		addss	%xmm5, %xmm1	# D.5344, s
- 309 016e F30F58CC 		addss	%xmm4, %xmm1	# D.5344, s
- 310              	.LVL24:
+ 357              		.loc 1 65 0 is_stmt 1
+                        ####CS540 COMMENT In the following block, move each value of temp and s into
+                        ####a register, and accumulate the sum of them all
+                        #################################################################
+ 358 03de F30F1085 		movss	-176(%rbp), %xmm0	# temp, D.4921
+ 358      50FFFFFF 
+ 359 03e6 0F28C8   		movaps	%xmm0, %xmm1	# D.4921, D.4921
+ 360 03e9 F30F588D 		addss	-208(%rbp), %xmm1	# s, D.4921
+ 360      30FFFFFF 
+ 361 03f1 F30F1085 		movss	-172(%rbp), %xmm0	# temp, D.4921
+ 361      54FFFFFF 
+ 362 03f9 F30F58C8 		addss	%xmm0, %xmm1	# D.4921, D.4921
+ 363 03fd F30F1085 		movss	-168(%rbp), %xmm0	# temp, D.4921
+ 363      58FFFFFF 
+ 364 0405 F30F58C8 		addss	%xmm0, %xmm1	# D.4921, D.4921
+ 365 0409 F30F1085 		movss	-164(%rbp), %xmm0	# temp, D.4921
+ 365      5CFFFFFF 
+ 366 0411 F30F58C1 		addss	%xmm1, %xmm0	# D.4921, tmp145
+ 367 0415 F30F1185 		movss	%xmm0, -208(%rbp)	# tmp145, s
+                        #Finish summing the variables####################################
+ 367      30FFFFFF 
   66:ti.c          ****   printf("s = %g\n",s);
- 311              		.loc 1 66 0
- 312 0172 F30F5AC1 		cvtss2sd	%xmm1, %xmm0	# s, D.5345
- 313 0176 F30F110C 		movss	%xmm1, (%rsp)	# s, %sfp
- 313      24
- 314              	.LBB71:
- 315              	.LBB70:
- 316              		.loc 3 104 0
- 317 017b E8000000 		call	__printf_chk	#
- 317      00
- 318              	.LVL25:
- 319              	.LBE70:
- 320              	.LBE71:
+ 368              		.loc 1 66 0
+                        #####CS540 COMMENT Convert the single scalar s to a double and store in %xmm0,
+                        #####for the call to printf
+ 369 041d F30F5A85 		cvtss2sd	-208(%rbp), %xmm0	# s, D.4922
+ 369      30FFFFFF 
+ 370 0425 BF000000 		movl	$.LC1, %edi	#,
+ 370      00
+ 371 042a B8010000 		movl	$1, %eax	#,
+ 371      00
+ 372 042f E8000000 		call	printf	#
+ 372      00
   67:ti.c          ****   return s;
+ 373              		.loc 1 67 0
+ 374 0434 8B8530FF 		movl	-208(%rbp), %eax	# s, D.4921
+ 374      FFFF
   68:ti.c          ****  }
- 321              		.loc 1 68 0
- 322 0180 F30F100C 		movss	(%rsp), %xmm1	# %sfp, s
- 322      24
- 323 0185 4883C428 		addq	$40, %rsp	#,
- 324              		.cfi_def_cfa_offset 40
- 325              	.LVL26:
- 326 0189 5B       		popq	%rbx	#
- 327              		.cfi_def_cfa_offset 32
- 328 018a 5D       		popq	%rbp	#
- 329              		.cfi_def_cfa_offset 24
- 330 018b 415C     		popq	%r12	#
- 331              		.cfi_def_cfa_offset 16
- 332 018d 0F28C1   		movaps	%xmm1, %xmm0	# s,
- 333 0190 415D     		popq	%r13	#
- 334              		.cfi_def_cfa_offset 8
- 335 0192 C3       		ret
- 336              		.cfi_endproc
- 337              	.LFE553:
- 339 0193 66666666 		.p2align 4,,15
- 339      2E0F1F84 
- 339      00000000 
- 339      00
- 340              		.globl	vinner2
- 342              	vinner2:
- 343              	.LFB554:
+ 375              		.loc 1 68 0
+ 376 043a 898508FF 		movl	%eax, -248(%rbp)	# <retval>, %sfp
+ 376      FFFF
+                        #####CS540 COMMENT Move the return value (s) into the return register, %xmm0
+ 377 0440 F30F1085 		movss	-248(%rbp), %xmm0	# %sfp,
+ 377      08FFFFFF 
+ 378 0448 C9       		leave
+ 379              		.cfi_def_cfa 7, 8
+ 380 0449 C3       		ret
+ 381              		.cfi_endproc
+ 382              	.LFE498:
+ 384              		.globl	vinner2
+ 386              	vinner2:
+ 387              	.LFB499:
   69:ti.c          **** 
   70:ti.c          **** float vinner2(float a[], float b[], int n)
   71:ti.c          ****  {
- 344              		.loc 1 71 0
- 345              		.cfi_startproc
- 346              	.LVL27:
+ 388              		.loc 1 71 0
+ 389              		.cfi_startproc
+ 390 044a 55       		pushq	%rbp	#
+ 391              		.cfi_def_cfa_offset 16
+ 392              		.cfi_offset 6, -16
+ 393 044b 4889E5   		movq	%rsp, %rbp	#,
+ 394              		.cfi_def_cfa_register 6
+ 395 044e 4881ECB0 		subq	$176, %rsp	#,
+ 395      000000
+ 396 0455 4889BDE8 		movq	%rdi, -280(%rbp)	# a, a
+ 396      FEFFFF
+ 397 045c 4889B5E0 		movq	%rsi, -288(%rbp)	# b, b
+ 397      FEFFFF
+ 398 0463 8995DCFE 		movl	%edx, -292(%rbp)	# n, n
+ 398      FFFF
   72:ti.c          ****   int i,nb;
   73:ti.c          ****   float s;
   74:ti.c          ****   float temp[4] __attribute__((aligned(16)));
   75:ti.c          ****   __m128 v1, v2, acc;
   76:ti.c          **** 
   77:ti.c          ****   nb = n - (n % 4);
- 347              		.loc 1 77 0
- 348 01a0 89D1     		movl	%edx, %ecx	# n, tmp101
- 349 01a2 4189D0   		movl	%edx, %r8d	# n, i
- 350 01a5 C1F91F   		sarl	$31, %ecx	#, tmp101
- 351              	.LBB72:
- 352              	.LBB73:
+ 399              		.loc 1 77 0
+ 400 0469 8B85DCFE 		movl	-292(%rbp), %eax	# n, tmp94
+ 400      FFFF
+ 401 046f 99       		cltd
+ 402 0470 C1EA1E   		shrl	$30, %edx	#, tmp96
+ 403 0473 01D0     		addl	%edx, %eax	# tmp96, tmp97
+ 404 0475 83E003   		andl	$3, %eax	#, tmp98
+ 405 0478 29D0     		subl	%edx, %eax	# tmp96, tmp99
+ 406 047a 8B95DCFE 		movl	-292(%rbp), %edx	# n, tmp103
+ 406      FFFF
+ 407 0480 29C2     		subl	%eax, %edx	# D.4926, tmp102
+ 408 0482 89D0     		movl	%edx, %eax	# tmp102, tmp102
+ 409 0484 8985F4FE 		movl	%eax, -268(%rbp)	# tmp102, nb
+ 409      FFFF
+                        #####CS540 COMMENT In the following block, move acc into two registers
+                        #####(storing it into two seperate memory locations at once) and then
+                        #####xor the registers as packed single-precision values
+                        #################################################################
+ 410 048a 0F288520 		movaps	-224(%rbp), %xmm0	# acc, tmp104
+ 410      FFFFFF
+ 411 0491 0F298550 		movaps	%xmm0, -176(%rbp)	# tmp104, __A
+ 411      FFFFFF
+ 412 0498 0F288520 		movaps	-224(%rbp), %xmm0	# acc, tmp105
+ 412      FFFFFF
+ 413 049f 0F298560 		movaps	%xmm0, -160(%rbp)	# tmp105, __B
+ 413      FFFFFF
+ 414              	.LBB42:
+ 415              	.LBB43:
  231:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
- 353              		.loc 2 231 0
- 354 01a8 0F57C9   		xorps	%xmm1, %xmm1	# acc
- 355              	.LBE73:
- 356              	.LBE72:
- 357              		.loc 1 77 0
- 358 01ab C1E91E   		shrl	$30, %ecx	#, tmp101
- 359 01ae 8D040A   		leal	(%rdx,%rcx), %eax	#, D.5369
- 360 01b1 83E003   		andl	$3, %eax	#, D.5369
- 361 01b4 29C8     		subl	%ecx, %eax	# tmp101, D.5369
- 362 01b6 4129C0   		subl	%eax, %r8d	# D.5369, i
- 363              	.LVL28:
+ 416              		.loc 2 231 0
+ 417 04a6 0F288560 		movaps	-160(%rbp), %xmm0	# __B, tmp106
+ 417      FFFFFF
+ 418 04ad 0F288D50 		movaps	-176(%rbp), %xmm1	# __A, tmp107
+ 418      FFFFFF
+ 419 04b4 0F57C1   		xorps	%xmm1, %xmm0	# tmp107, D.4931
+                        #Finish xor'ing acc##############################################
+ 420              	.LBE43:
+ 421              	.LBE42:
   78:ti.c          ****   acc = _mm_xor_ps(acc,acc);
+ 422              		.loc 1 78 0
+                        #####CS540 Store the xor'd value back to acc in memory
+ 423 04b7 0F298520 		movaps	%xmm0, -224(%rbp)	# D.4873, acc
+ 423      FFFFFF
   79:ti.c          ****   for (i = 0; i < nb; i += 4)
- 364              		.loc 1 79 0
- 365 01b9 4585C0   		testl	%r8d, %r8d	# i
- 366 01bc 7E26     		jle	.L13	#,
- 367 01be 418D48FF 		leal	-1(%r8), %ecx	#, D.5370
- 368 01c2 31C0     		xorl	%eax, %eax	# ivtmp.56
- 369 01c4 C1E902   		shrl	$2, %ecx	#,
- 370 01c7 48FFC1   		incq	%rcx	# D.5371
- 371 01ca 48C1E104 		salq	$4, %rcx	#, D.5371
- 372              	.LVL29:
- 373 01ce 6690     		.p2align 4,,7
- 374              		.p2align 3
- 375              	.L14:
- 376              	.LBB74:
- 377              	.LBB75:
- 169:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
- 378              		.loc 2 169 0 discriminator 2
- 379 01d0 0F280407 		movaps	(%rdi,%rax), %xmm0	# MEM[base: a_11(D), index: ivtmp.56_46, offset: 0B], tmp110
- 380 01d4 0F590406 		mulps	(%rsi,%rax), %xmm0	# MEM[base: b_14(D), index: ivtmp.56_46, offset: 0B], tmp110
- 381              	.LVL30:
- 382 01d8 4883C010 		addq	$16, %rax	#, ivtmp.56
- 383              	.LVL31:
- 384              	.LBE75:
- 385              	.LBE74:
- 386              		.loc 1 79 0 discriminator 2
- 387 01dc 4839C8   		cmpq	%rcx, %rax	# D.5371, ivtmp.56
- 388              	.LBB76:
- 389              	.LBB77:
- 157:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
- 390              		.loc 2 157 0 discriminator 2
- 391 01df 0F58C8   		addps	%xmm0, %xmm1	# tmp110, acc
- 392              	.LVL32:
- 393              	.LBE77:
- 394              	.LBE76:
- 395              		.loc 1 79 0 discriminator 2
- 396 01e2 75EC     		jne	.L14	#,
- 397              	.LVL33:
- 398              	.L13:
- 399              	.LBB78:
- 400              	.LBB79:
- 717:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
- 401              		.loc 2 717 0
- 402 01e4 0F28D1   		movaps	%xmm1, %xmm2	# acc, tmp117
- 403              	.LBE79:
- 404              	.LBE78:
+ 424              		.loc 1 79 0
+ 425 04be C785F0FE 		movl	$0, -272(%rbp)	#, i
+ 425      FFFF0000 
+ 425      0000
+ 426 04c8 E9C10000 		jmp	.L21	#
+ 426      00
+ 427              	.L26:
   80:ti.c          ****    {
   81:ti.c          ****     v1 = _mm_load_ps(&a[i]);
+ 428              		.loc 1 81 0 discriminator 2
+ 429 04cd 8B85F0FE 		movl	-272(%rbp), %eax	# i, tmp108
+ 429      FFFF
+ 430 04d3 4898     		cltq
+ 431 04d5 488D1485 		leaq	0(,%rax,4), %rdx	#, D.4927
+ 431      00000000 
+ 432 04dd 488B85E8 		movq	-280(%rbp), %rax	# a, tmp109
+ 432      FEFFFF
+ 433 04e4 4801D0   		addq	%rdx, %rax	# D.4927, D.4928
+ 434 04e7 488985F8 		movq	%rax, -264(%rbp)	# D.4928, __P
+ 434      FEFFFF
+ 435              	.LBB44:
+ 436              	.LBB45:
+ 898:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
+ 437              		.loc 2 898 0 discriminator 2
+ 438 04ee 488B85F8 		movq	-264(%rbp), %rax	# __P, tmp110
+ 438      FEFFFF
+                        #####CS540 COMMENT Retrieve the next four values of a and place into %xmm0
+ 439 04f5 0F2800   		movaps	(%rax), %xmm0	# MEM[(__v4sf *)__P_44], D.4931
+ 440              	.LBE45:
+ 441              	.LBE44:
+ 442              		.loc 1 81 0 discriminator 2
+                        ######CS540 COMMENT Store the loaded values of a back to v1 as four packed
+                        ######singles
+ 443 04f8 0F298530 		movaps	%xmm0, -208(%rbp)	# D.4877, v1
+ 443      FFFFFF
   82:ti.c          ****     v2 = _mm_load_ps(&b[i]);
+ 444              		.loc 1 82 0 discriminator 2
+ 445 04ff 8B85F0FE 		movl	-272(%rbp), %eax	# i, tmp111
+ 445      FFFF
+ 446 0505 4898     		cltq
+ 447 0507 488D1485 		leaq	0(,%rax,4), %rdx	#, D.4927
+ 447      00000000 
+ 448 050f 488B85E0 		movq	-288(%rbp), %rax	# b, tmp112
+ 448      FEFFFF
+ 449 0516 4801D0   		addq	%rdx, %rax	# D.4927, D.4928
+ 450 0519 48898500 		movq	%rax, -256(%rbp)	# D.4928, __P
+ 450      FFFFFF
+ 451              	.LBB46:
+ 452              	.LBB47:
+ 898:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
+ 453              		.loc 2 898 0 discriminator 2
+ 454 0520 488B8500 		movq	-256(%rbp), %rax	# __P, tmp113
+ 454      FFFFFF
+                        #####CS540 COMMENT Retrieve the next four values of b and place into %xmm0
+ 455 0527 0F2800   		movaps	(%rax), %xmm0	# MEM[(__v4sf *)__P_46], D.4931
+ 456              	.LBE47:
+ 457              	.LBE46:
+ 458              		.loc 1 82 0 discriminator 2
+                        ######CS540 COMMENT Store the loaded values of b back to v2 as four packed
+                        ######singles
+ 459 052a 0F298540 		movaps	%xmm0, -192(%rbp)	# D.4881, v2
+ 459      FFFFFF
+                        ######CS540 COMMENT In the following block move the four values of v1 to an
+                        ######SSE register, then back to memory, then do the same for v2
+                        #################################################################
+ 460 0531 0F288530 		movaps	-208(%rbp), %xmm0	# v1, tmp114
+ 460      FFFFFF
+ 461 0538 0F298570 		movaps	%xmm0, -144(%rbp)	# tmp114, __A
+ 461      FFFFFF
+ 462 053f 0F288540 		movaps	-192(%rbp), %xmm0	# v2, tmp115
+ 462      FFFFFF
+ 463 0546 0F294580 		movaps	%xmm0, -128(%rbp)	# tmp115, __B
+                        #End block#######################################################
+ 464              	.LBB48:
+ 465              	.LBB49:
+ 169:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
+ 466              		.loc 2 169 0 discriminator 2
+                        #####CS540 COMMENT In this block, move v2 (which has values of b) into %xmm0
+                        #####and v1 (which has values of a) into xmm1, then multiple them and store
+                        #####the results back to v2
+                        #################################################################
+ 467 054a 0F284580 		movaps	-128(%rbp), %xmm0	# __B, tmp116
+ 468 054e 0F288D70 		movaps	-144(%rbp), %xmm1	# __A, tmp117
+ 468      FFFFFF
+ 469 0555 0F59C1   		mulps	%xmm1, %xmm0	# tmp117, D.4931
+ 470              	.LBE49:
+ 471              	.LBE48:
   83:ti.c          ****     v2 = _mm_mul_ps(v1,v2);
+ 472              		.loc 1 83 0 discriminator 2
+ 473 0558 0F298540 		movaps	%xmm0, -192(%rbp)	# D.4886, v2
+                        #End block#######################################################
+ 473      FFFFFF
+                        #####CS540 COMMENT In this block, move acc and v2 into registers, also moving
+                        #####them back into memory in the meantime, then add the results and store
+                        #####them back to acc
+                        #################################################################
+ 474 055f 0F288520 		movaps	-224(%rbp), %xmm0	# acc, tmp118
+ 474      FFFFFF
+ 475 0566 0F294590 		movaps	%xmm0, -112(%rbp)	# tmp118, __A
+ 476 056a 0F288540 		movaps	-192(%rbp), %xmm0	# v2, tmp119
+ 476      FFFFFF
+ 477 0571 0F2945A0 		movaps	%xmm0, -96(%rbp)	# tmp119, __B
+ 478              	.LBB50:
+ 479              	.LBB51:
+ 157:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
+ 480              		.loc 2 157 0 discriminator 2
+                        #####Load the values of v2, then the values of acc
+ 481 0575 0F2845A0 		movaps	-96(%rbp), %xmm0	# __B, tmp120
+ 482 0579 0F284D90 		movaps	-112(%rbp), %xmm1	# __A, tmp121
+ 483 057d 0F58C1   		addps	%xmm1, %xmm0	# tmp121, D.4931
+ 484              	.LBE51:
+ 485              	.LBE50:
   84:ti.c          ****     acc = _mm_add_ps(acc,v2);
+ 486              		.loc 1 84 0 discriminator 2
+                        #####Store acc
+ 487 0580 0F298520 		movaps	%xmm0, -224(%rbp)	# D.4891, acc
+                        #End block#######################################################
+ 487      FFFFFF
+  79:ti.c          ****    {
+ 488              		.loc 1 79 0 discriminator 2
+ 489 0587 8385F0FE 		addl	$4, -272(%rbp)	#, i
+ 489      FFFF04
+ 490              	.L21:
+  79:ti.c          ****    {
+ 491              		.loc 1 79 0 is_stmt 0 discriminator 1
+ 492 058e 8B85F0FE 		movl	-272(%rbp), %eax	# i, tmp122
+ 492      FFFF
+ 493 0594 3B85F4FE 		cmpl	-268(%rbp), %eax	# nb, tmp122
+ 493      FFFF
+ 494 059a 0F8C2DFF 		jl	.L26	#,
+ 494      FFFF
   85:ti.c          ****    }
   86:ti.c          ****   v1 = _mm_shuffle_ps(acc,acc,_MM_SHUFFLE(1,0,3,2));
+ 495              		.loc 1 86 0 is_stmt 1
+                        #####CS540 COMMENT Move acc into both %xmm0 and %xmm1
+ 496 05a0 0F288520 		movaps	-224(%rbp), %xmm0	# acc, tmp124
+ 496      FFFFFF
+ 497 05a7 0F288D20 		movaps	-224(%rbp), %xmm1	# acc, tmp125
+ 497      FFFFFF
+                        ######CS540 COMMENT $78 is the mask for the _MM_SHUFFLE(1, 0, 3, 2)
+                        ######The instruction then means take the second lowest address scalar
+                        ######from %xmm0, then take the lowest. Then take the highest address scalar
+                        ######from %xmm1, then take the second highest. Store the result in %xmm0
+ 498 05ae 0FC6C14E 		shufps	$78, %xmm1, %xmm0	#, tmp125, tmp123
+                        #####Store that result back to v1
+ 499 05b2 0F298530 		movaps	%xmm0, -208(%rbp)	# tmp123, v1
+ 499      FFFFFF
+                        #####CS540 COMMENT Reload the 4 values of v1 from memory as packed singles
+ 500 05b9 0F288530 		movaps	-208(%rbp), %xmm0	# v1, tmp126
+ 500      FFFFFF
+                        ######CS540 COMMENT Store the 4 packed values of %xmm0 (which are the values
+                        ######of v1) back to memory
+ 501 05c0 0F2945B0 		movaps	%xmm0, -80(%rbp)	# tmp126, __A
+                        ######CS540 COMMENT Get the value of acc from memory
+ 502 05c4 0F288520 		movaps	-224(%rbp), %xmm0	# acc, tmp127
+ 502      FFFFFF
+                        #####Store the value of acc back to memory
+ 503 05cb 0F2945C0 		movaps	%xmm0, -64(%rbp)	# tmp127, __B
+ 504              	.LBB52:
+ 505              	.LBB53:
+ 157:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
+ 506              		.loc 2 157 0
+                        #####CS540 COMMENT Load then add the values of v1 and acc over the next 3
+                        #####instructions
+ 507 05cf 0F2845C0 		movaps	-64(%rbp), %xmm0	# __B, tmp128
+ 508 05d3 0F284DB0 		movaps	-80(%rbp), %xmm1	# __A, tmp129
+ 509 05d7 0F58C1   		addps	%xmm1, %xmm0	# tmp129, D.4931
+ 510              	.LBE53:
+ 511              	.LBE52:
   87:ti.c          ****   v1 = _mm_add_ps(v1,acc);
+ 512              		.loc 1 87 0
+                        #####CS540 COMMENT Store the result of the addition back to v1
+ 513 05da 0F298530 		movaps	%xmm0, -208(%rbp)	# D.4896, v1
+ 513      FFFFFF
   88:ti.c          ****   v2 = _mm_shuffle_ps(v1,v1,_MM_SHUFFLE(2,3,0,1));
+ 514              		.loc 1 88 0
+                        #####CS540 COMMENT Load v1 into %xmm0 and %xmm1
+ 515 05e1 0F288530 		movaps	-208(%rbp), %xmm0	# v1, tmp131
+ 515      FFFFFF
+ 516 05e8 0F288D30 		movaps	-208(%rbp), %xmm1	# v1, tmp132
+ 516      FFFFFF
+                        #####CS540 COMMENT 177 is the mask for _MM_SHUFFLE(2, 3, 0, 1). The
+                        #####instruction then takes the second highest and highest addressed scalar of                        #####%xmm0 and the lowest and second lowest addresses scalars of %xmm1.
+                        #####Store the result in %xmm0
+ 517 05ef 0FC6C1B1 		shufps	$177, %xmm1, %xmm0	#, tmp132, tmp130
+                        #####Store the result of the shuffle back to v2
+ 518 05f3 0F298540 		movaps	%xmm0, -192(%rbp)	# tmp130, v2
+ 518      FFFFFF
+                        #####CS540 COMMENT Over the next block, load four values of v2 and v1 and then
+                        #####add them as packed singles, storing the result back to v2
+                        #################################################################
+ 519 05fa 0F288540 		movaps	-192(%rbp), %xmm0	# v2, tmp133
+ 519      FFFFFF
+ 520 0601 0F2945D0 		movaps	%xmm0, -48(%rbp)	# tmp133, __A
+ 521 0605 0F288530 		movaps	-208(%rbp), %xmm0	# v1, tmp134
+ 521      FFFFFF
+ 522 060c 0F2945E0 		movaps	%xmm0, -32(%rbp)	# tmp134, __B
+ 523              	.LBB54:
+ 524              	.LBB55:
+ 157:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
+ 525              		.loc 2 157 0
+ 526 0610 0F2845E0 		movaps	-32(%rbp), %xmm0	# __B, tmp135
+ 527 0614 0F284DD0 		movaps	-48(%rbp), %xmm1	# __A, tmp136
+ 528 0618 0F58C1   		addps	%xmm1, %xmm0	# tmp136, D.4931
+ 529              	.LBE55:
+ 530              	.LBE54:
   89:ti.c          ****   v2 = _mm_add_ps(v2,v1);
+ 531              		.loc 1 89 0
+ 532 061b 0F298540 		movaps	%xmm0, -192(%rbp)	# D.4901, v2
+                        #End block#######################################################
+ 532      FFFFFF
+ 533 0622 488D8510 		leaq	-240(%rbp), %rax	#, tmp137
+ 533      FFFFFF
+ 534 0629 48898508 		movq	%rax, -248(%rbp)	# tmp137, __P
+ 534      FFFFFF
+                        #####CS540 COMMENT Move the value of v2 to %xmm0
+ 535 0630 0F288540 		movaps	-192(%rbp), %xmm0	# v2, tmp138
+ 535      FFFFFF
+                        #####CS540 COMMENT Copy the value of v2 again
+ 536 0637 0F2945F0 		movaps	%xmm0, -16(%rbp)	# tmp138, __A
+ 537              	.LBB56:
+ 538              	.LBB57:
+ 934:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
+ 539              		.loc 2 934 0
+                        #####CS540 COMMENT Move the value of v2 again
+ 540 063b 0F2845F0 		movaps	-16(%rbp), %xmm0	# __A, tmp139
+ 541 063f 0F28C0   		movaps	%xmm0, %xmm0	#, D.4930
+ 542 0642 488B8508 		movq	-248(%rbp), %rax	# __P, tmp140
+ 542      FFFFFF
+                        #####CS540 Move the single scalar value of %xmm0 to the memory location
+                        #####at which %rax points
+ 543 0649 F30F1100 		movss	%xmm0, (%rax)	# D.4930, *__P_60
+ 544              	.LBE57:
+ 545              	.LBE56:
   90:ti.c          ****   _mm_store_ss(&s,v2);
   91:ti.c          ****   for (i = nb; i < n; i++)
- 405              		.loc 1 91 0
- 406 01e7 4439C2   		cmpl	%r8d, %edx	# i, n
- 407              	.LBB81:
- 408              	.LBB80:
- 717:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
- 409              		.loc 2 717 0
- 410 01ea 0FC6D14E 		shufps	$78, %xmm1, %xmm2	#, acc, tmp117
- 411              	.LVL34:
- 412              	.LBE80:
- 413              	.LBE81:
- 414              	.LBB82:
- 415              	.LBB83:
- 157:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
- 416              		.loc 2 157 0
- 417 01ee 0F58D1   		addps	%xmm1, %xmm2	# acc, tmp117
- 418              	.LVL35:
- 419              	.LBE83:
- 420              	.LBE82:
- 421              	.LBB84:
- 422              	.LBB85:
- 717:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
- 423              		.loc 2 717 0
- 424 01f1 0F28C2   		movaps	%xmm2, %xmm0	# tmp117, tmp121
- 425 01f4 0FC6C2B1 		shufps	$177, %xmm2, %xmm0	#, tmp117, tmp121
- 426              	.LVL36:
- 427              	.LBE85:
- 428              	.LBE84:
- 429              	.LBB86:
- 430              	.LBB87:
- 157:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** }
- 431              		.loc 2 157 0
- 432 01f8 0F58C2   		addps	%xmm2, %xmm0	# tmp117, tmp121
- 433              	.LVL37:
- 434              	.LBE87:
- 435              	.LBE86:
- 436              		.loc 1 91 0
- 437 01fb 7E3A     		jle	.L15	#,
- 438 01fd FFCA     		decl	%edx	# D.5370
- 439              	.LVL38:
- 440 01ff 31C0     		xorl	%eax, %eax	# ivtmp.49
- 441 0201 4429C2   		subl	%r8d, %edx	# i, D.5371
- 442              	.LVL39:
- 443 0204 4D63C0   		movslq	%r8d, %r8	# i, D.5371
- 444              	.LVL40:
- 445 0207 49C1E002 		salq	$2, %r8	#, D.5371
- 446              	.LVL41:
- 447 020b 488D1495 		leaq	4(,%rdx,4), %rdx	#, D.5371
- 447      04000000 
- 448 0213 4C01C7   		addq	%r8, %rdi	# D.5371, D.5374
- 449              	.LVL42:
- 450 0216 4C01C6   		addq	%r8, %rsi	# D.5371, D.5374
- 451              	.LVL43:
- 452 0219 0F1F8000 		.p2align 4,,7
- 452      000000
- 453              		.p2align 3
- 454              	.L16:
+ 546              		.loc 1 91 0
+ 547 064d 8B85F4FE 		movl	-268(%rbp), %eax	# nb, tmp141
+ 547      FFFF
+ 548 0653 8985F0FE 		movl	%eax, -272(%rbp)	# tmp141, i
+ 548      FFFF
+ 549 0659 EB5A     		jmp	.L29	#
+ 550              	.L30:
   92:ti.c          ****    s += a[i] * b[i];
- 455              		.loc 1 92 0 discriminator 2
- 456 0220 F30F100C 		movss	(%rdi,%rax), %xmm1	# MEM[base: _76, index: ivtmp.49_80, offset: 0B], D.5372
- 456      07
- 457 0225 F30F590C 		mulss	(%rsi,%rax), %xmm1	# MEM[base: _73, index: ivtmp.49_80, offset: 0B], D.5372
- 457      06
- 458 022a 4883C004 		addq	$4, %rax	#, ivtmp.49
+ 551              		.loc 1 92 0 discriminator 2
+ 552 065b 8B85F0FE 		movl	-272(%rbp), %eax	# i, tmp142
+ 552      FFFF
+ 553 0661 4898     		cltq
+ 554 0663 488D1485 		leaq	0(,%rax,4), %rdx	#, D.4927
+ 554      00000000 
+ 555 066b 488B85E8 		movq	-280(%rbp), %rax	# a, tmp143
+ 555      FEFFFF
+ 556 0672 4801D0   		addq	%rdx, %rax	# D.4927, D.4929
+                        #####CS540 COMMENT Load the current single scalar of a to %xmm1
+ 557 0675 F30F1008 		movss	(%rax), %xmm1	# *_30, D.4930
+ 558 0679 8B85F0FE 		movl	-272(%rbp), %eax	# i, tmp144
+ 558      FFFF
+ 559 067f 4898     		cltq
+ 560 0681 488D1485 		leaq	0(,%rax,4), %rdx	#, D.4927
+ 560      00000000 
+ 561 0689 488B85E0 		movq	-288(%rbp), %rax	# b, tmp145
+ 561      FEFFFF
+ 562 0690 4801D0   		addq	%rdx, %rax	# D.4927, D.4929
+                        #####CS540 COMMENT Load the current single scalar of b to %xmm0
+ 563 0693 F30F1000 		movss	(%rax), %xmm0	# *_34, D.4930
+                        #####CS540 COMMENT Multiply the single scalars in %xmm0 and %xmm1 (the current
+                        #####elemetns of a and b)
+ 564 0697 F30F59C8 		mulss	%xmm0, %xmm1	# D.4930, D.4930
+                        #####CS540 COMMENT Load the single scalar s, a running sum
+ 565 069b F30F1085 		movss	-240(%rbp), %xmm0	# s, s.0
+ 565      10FFFFFF 
+                        #####CS540 COMMENT add the product to the running sum held in %xmm0
+ 566 06a3 F30F58C1 		addss	%xmm1, %xmm0	# D.4930, s.1
+                        #####CS540 COMMENT store the new sum back to the running sum, s
+ 567 06a7 F30F1185 		movss	%xmm0, -240(%rbp)	# s.1, s
+ 567      10FFFFFF 
   91:ti.c          ****    s += a[i] * b[i];
- 459              		.loc 1 91 0 discriminator 2
- 460 022e 4839D0   		cmpq	%rdx, %rax	# D.5371, ivtmp.49
- 461              		.loc 1 92 0 discriminator 2
- 462 0231 F30F58C1 		addss	%xmm1, %xmm0	# D.5372, s
- 463              	.LVL44:
+ 568              		.loc 1 91 0 discriminator 2
+ 569 06af FF85F0FE 		incl	-272(%rbp)	# i
+ 569      FFFF
+ 570              	.L29:
   91:ti.c          ****    s += a[i] * b[i];
- 464              		.loc 1 91 0 discriminator 2
- 465 0235 75E9     		jne	.L16	#,
- 466              	.L15:
+ 571              		.loc 1 91 0 is_stmt 0 discriminator 1
+ 572 06b5 8B85F0FE 		movl	-272(%rbp), %eax	# i, tmp146
+ 572      FFFF
+ 573 06bb 3B85DCFE 		cmpl	-292(%rbp), %eax	# n, tmp146
+ 573      FFFF
+ 574 06c1 7C98     		jl	.L30	#,
   93:ti.c          ****   return s;
+ 575              		.loc 1 93 0 is_stmt 1
+ 576 06c3 8B8510FF 		movl	-240(%rbp), %eax	# s, D.4930
+ 576      FFFF
   94:ti.c          ****  }
- 467              		.loc 1 94 0
- 468 0237 F3C3     		rep ret
- 469              		.cfi_endproc
- 470              	.LFE554:
- 472              		.section	.rodata.str1.1
- 473              	.LC6:
- 474 0015 76656374 		.string	"vector s = %g\n"
- 474      6F722073 
- 474      203D2025 
- 474      670A00
- 475              	.LC7:
- 476 0024 76656374 		.string	"vector2 s = %g\n"
- 476      6F723220 
- 476      73203D20 
- 476      25670A00 
- 477              		.section	.text.startup,"ax",@progbits
- 478              		.p2align 4,,15
- 479              		.globl	main
- 481              	main:
- 482              	.LFB551:
-  11:ti.c          **** 
- 483              		.loc 1 11 0
- 484              		.cfi_startproc
- 485              	.LVL45:
- 486 0000 53       		pushq	%rbx	#
- 487              		.cfi_def_cfa_offset 16
- 488              		.cfi_offset 3, -16
-  20:ti.c          ****    }
- 489              		.loc 1 20 0
- 490 0001 31C0     		xorl	%eax, %eax	# ivtmp.88
-  11:ti.c          **** 
- 491              		.loc 1 11 0
- 492 0003 4881EC40 		subq	$8000, %rsp	#,
- 492      1F0000
- 493              		.cfi_def_cfa_offset 8016
- 494 000a 660F6F1D 		movdqa	.LC4(%rip), %xmm3	#, vect_cst_.62
- 494      00000000 
-  20:ti.c          ****    }
- 495              		.loc 1 20 0
- 496 0012 660F6F05 		movdqa	.LC3(%rip), %xmm0	#, vect_vec_iv_.63
- 496      00000000 
- 497 001a 0F281500 		movaps	.LC5(%rip), %xmm2	#, tmp99
- 497      000000
- 498 0021 EB09     		jmp	.L19	#
- 499              	.LVL46:
- 500              		.p2align 4,,7
- 501 0023 0F1F4400 		.p2align 3
- 501      00
- 502              	.L23:
- 503 0028 660F6FC1 		movdqa	%xmm1, %xmm0	# vect_vec_iv_.63, vect_vec_iv_.63
- 504              	.L19:
- 505 002c 660F6FC8 		movdqa	%xmm0, %xmm1	# vect_vec_iv_.63, vect_vec_iv_.63
-  19:ti.c          ****     b[i] = 1;
- 506              		.loc 1 19 0 discriminator 2
- 507 0030 0F5BC0   		cvtdq2ps	%xmm0, %xmm0	# vect_vec_iv_.63, tmp82
-  20:ti.c          ****    }
- 508              		.loc 1 20 0 discriminator 2
- 509 0033 0F299404 		movaps	%xmm2, 4000(%rsp,%rax)	# tmp99, MEM[symbol: b, index: ivtmp.88_44, offset: 0B]
- 509      A00F0000 
- 510 003b 660FFECB 		paddd	%xmm3, %xmm1	# vect_cst_.62, vect_vec_iv_.63
-  19:ti.c          ****     b[i] = 1;
- 511              		.loc 1 19 0 discriminator 2
- 512 003f 0F290404 		movaps	%xmm0, (%rsp,%rax)	# tmp82, MEM[symbol: a, index: ivtmp.88_44, offset: 0B]
- 513 0043 4883C010 		addq	$16, %rax	#, ivtmp.88
- 514 0047 483DA00F 		cmpq	$4000, %rax	#, ivtmp.88
- 514      0000
- 515 004d 75D9     		jne	.L23	#,
-  20:ti.c          ****    }
- 516              		.loc 1 20 0
- 517 004f 0F57C9   		xorps	%xmm1, %xmm1	# s0
- 518 0052 31C0     		xorl	%eax, %eax	# ivtmp.83
- 519              		.p2align 4,,7
- 520 0054 0F1F4000 		.p2align 3
- 521              	.L21:
- 522              	.LVL47:
- 523              	.LBB88:
- 524              	.LBB89:
-  40:ti.c          ****   return s;
- 525              		.loc 1 40 0
- 526 0058 F30F1004 		movss	(%rsp,%rax), %xmm0	# MEM[symbol: a, index: ivtmp.83_39, offset: 0B], D.5412
- 526      04
- 527 005d F30F5984 		mulss	4000(%rsp,%rax), %xmm0	# MEM[symbol: b, index: ivtmp.83_39, offset: 0B], D.5412
- 527      04A00F00 
- 527      00
- 528 0066 4883C004 		addq	$4, %rax	#, ivtmp.83
-  39:ti.c          ****    s += a[i] * b[i];
- 529              		.loc 1 39 0
- 530 006a 483DA00F 		cmpq	$4000, %rax	#, ivtmp.83
- 530      0000
-  40:ti.c          ****   return s;
- 531              		.loc 1 40 0
- 532 0070 F30F58C8 		addss	%xmm0, %xmm1	# D.5412, s0
- 533              	.LVL48:
-  39:ti.c          ****    s += a[i] * b[i];
- 534              		.loc 1 39 0
- 535 0074 75E2     		jne	.L21	#,
- 536              	.LVL49:
- 537              	.LBE89:
- 538              	.LBE88:
-  24:ti.c          **** 
- 539              		.loc 1 24 0
- 540 0076 F30F5AC1 		cvtss2sd	%xmm1, %xmm0	# s0, D.5410
- 541              	.LBB90:
- 542              	.LBB91:
- 543              		.loc 3 104 0
- 544 007a BE000000 		movl	$.LC2, %esi	#,
- 544      00
- 545              	.LVL50:
- 546 007f BF010000 		movl	$1, %edi	#,
- 546      00
- 547              	.LVL51:
- 548 0084 B8010000 		movl	$1, %eax	#,
- 548      00
- 549              	.LBE91:
- 550              	.LBE90:
-  26:ti.c          ****   printf("vector s = %g\n",s1);
- 551              		.loc 1 26 0
- 552 0089 31DB     		xorl	%ebx, %ebx	# n
- 553              	.LBB93:
- 554              	.LBB92:
- 555              		.loc 3 104 0
- 556 008b E8000000 		call	__printf_chk	#
- 556      00
- 557              	.LVL52:
- 558              	.LBE92:
- 559              	.LBE93:
-  26:ti.c          ****   printf("vector s = %g\n",s1);
- 560              		.loc 1 26 0
- 561 0090 488DB424 		leaq	4000(%rsp), %rsi	#, tmp101
- 561      A00F0000 
- 562 0098 89DA     		movl	%ebx, %edx	# n,
- 563 009a 4889E7   		movq	%rsp, %rdi	#,
- 564 009d 31C0     		xorl	%eax, %eax	#
- 565 009f E8000000 		call	vinner1	#
- 565      00
- 566              	.LVL53:
- 567 00a4 F30F2AC0 		cvtsi2ss	%eax, %xmm0	# D.5411, s1
- 568              	.LVL54:
- 569              	.LBB94:
- 570              	.LBB95:
- 571              		.loc 3 104 0
- 572 00a8 BE000000 		movl	$.LC6, %esi	#,
- 572      00
- 573 00ad BF010000 		movl	$1, %edi	#,
- 573      00
- 574 00b2 B8010000 		movl	$1, %eax	#,
- 574      00
- 575              	.LBE95:
- 576              	.LBE94:
-  27:ti.c          **** 
- 577              		.loc 1 27 0
- 578 00b7 F30F5AC0 		cvtss2sd	%xmm0, %xmm0	# s1, D.5410
- 579              	.LVL55:
- 580              	.LBB97:
- 581              	.LBB96:
- 582              		.loc 3 104 0
- 583 00bb E8000000 		call	__printf_chk	#
- 583      00
- 584              	.LVL56:
- 585              	.LBE96:
- 586              	.LBE97:
-  29:ti.c          ****   printf("vector2 s = %g\n",s2);
- 587              		.loc 1 29 0
- 588 00c0 488DB424 		leaq	4000(%rsp), %rsi	#, tmp102
- 588      A00F0000 
- 589 00c8 89DA     		movl	%ebx, %edx	# n,
- 590 00ca 4889E7   		movq	%rsp, %rdi	#,
- 591 00cd E8000000 		call	vinner2	#
- 591      00
- 592              	.LVL57:
-  30:ti.c          ****  }
- 593              		.loc 1 30 0
- 594 00d2 F30F5AC0 		cvtss2sd	%xmm0, %xmm0	# s2, D.5410
- 595              	.LVL58:
- 596              	.LBB98:
- 597              	.LBB99:
- 598              		.loc 3 104 0
- 599 00d6 BE000000 		movl	$.LC7, %esi	#,
- 599      00
- 600 00db BF010000 		movl	$1, %edi	#,
- 600      00
- 601 00e0 B8010000 		movl	$1, %eax	#,
- 601      00
- 602 00e5 E8000000 		call	__printf_chk	#
- 602      00
- 603              	.LVL59:
- 604              	.LBE99:
- 605              	.LBE98:
-  31:ti.c          **** 
- 606              		.loc 1 31 0
- 607 00ea 4881C440 		addq	$8000, %rsp	#,
- 607      1F0000
- 608              		.cfi_def_cfa_offset 16
- 609 00f1 5B       		popq	%rbx	#
- 610              		.cfi_def_cfa_offset 8
- 611 00f2 C3       		ret
- 612              		.cfi_endproc
- 613              	.LFE551:
- 615              		.section	.rodata.cst16,"aM",@progbits,16
- 616              		.align 16
- 617              	.LC3:
- 618 0000 00000000 		.long	0
- 619 0004 01000000 		.long	1
- 620 0008 02000000 		.long	2
- 621 000c 03000000 		.long	3
- 622              		.align 16
- 623              	.LC4:
- 624 0010 04000000 		.long	4
- 625 0014 04000000 		.long	4
- 626 0018 04000000 		.long	4
- 627 001c 04000000 		.long	4
- 628              		.align 16
- 629              	.LC5:
- 630 0020 0000803F 		.long	1065353216
- 631 0024 0000803F 		.long	1065353216
- 632 0028 0000803F 		.long	1065353216
- 633 002c 0000803F 		.long	1065353216
- 634              		.text
- 635              	.Letext0:
- 636              		.file 4 "/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h"
- 637              		.file 5 "/usr/include/x86_64-linux-gnu/bits/types.h"
- 638              		.file 6 "/usr/include/libio.h"
- 639              		.file 7 "/usr/include/stdio.h"
+ 577              		.loc 1 94 0
+ 578 06c9 8985D8FE 		movl	%eax, -296(%rbp)	# <retval>, %sfp
+ 578      FFFF
+                        #####CS540 COMMENT Move the result of the computation (s), the return value,
+                        #####to the return register, %xmm0
+ 579 06cf F30F1085 		movss	-296(%rbp), %xmm0	# %sfp,
+ 579      D8FEFFFF 
+ 580 06d7 C9       		leave
+ 581              		.cfi_def_cfa 7, 8
+ 582 06d8 C3       		ret
+ 583              		.cfi_endproc
+ 584              	.LFE499:
+ 586              		.section	.rodata
+ 587              		.align 4
+ 588              	.LC0:
+ 589 0034 0000803F 		.long	1065353216
+ 590              		.align 4
+ 591              	.LC4:
+ 592 0038 00000000 		.long	0
+ 593              		.text
+ 594              	.Letext0:

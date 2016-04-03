@@ -65,12 +65,19 @@
   59              		.loc 1 7 0
   60              		.cfi_startproc
   61              	.LVL0:
+
+                        #####CS540 COMMENT Immediately move (4, 4, 4, 4) into the SSE %xmm3 register
   62 0000 660F6F1D 		movdqa	.LC2(%rip), %xmm3	#, vect_cst_.5
   62      00000000 
   63              		.loc 1 7 0
   64 0008 31C0     		xorl	%eax, %eax	# ivtmp.32
+
+                        #####CS540 COMMENT Move the data at LC0 (0, 1, 2, 3) into the %xmm0 register,
+                        #####as double quadwords, aligned
   65 000a 660F6F05 		movdqa	.LC0(%rip), %xmm0	#, vect_vec_iv_.6
-  65      00000000 
+  65      00000000
+                        #####CS540 COMMENT Move the aligned packed single precision numbers at LC3
+                        #####(1) to %xmm2
   66 0012 0F281500 		movaps	.LC3(%rip), %xmm2	#, tmp107
   66      000000
   67 0019 EB09     		jmp	.L3	#
@@ -79,8 +86,11 @@
   69      00
   70              		.p2align 3
   71              	.L7:
+                        #####CS540 COMMENT Transfer the value from %xmm1 to %xmm0
   72 0020 660F6FC1 		movdqa	%xmm1, %xmm0	# vect_vec_iv_.6, vect_vec_iv_.6
   73              	.L3:
+                        #####CS540 COMMENT Move the double aligned quadword from %xmm0 to %xmm1
+                        #####For example, on the first iteration, this gives (1 2 3 4) -> (1 2 3 4)
   74 0024 660F6FC8 		movdqa	%xmm0, %xmm1	# vect_vec_iv_.6, vect_vec_iv_.6
   75 0028 4883C010 		addq	$16, %rax	#, ivtmp.32
    8:test21.c      ****   int i, n;
@@ -90,14 +100,24 @@
   12:test21.c      ****    {
   13:test21.c      ****     a[i] = (float) i;
   76              		.loc 1 13 0 discriminator 2
+
+                        #####CS540 COMMENT "cast" %xmm0 to floating point
   77 002c 0F5BC0   		cvtdq2ps	%xmm0, %xmm0	# vect_vec_iv_.6, tmp102
+
   14:test21.c      ****     b[i] = 1.0;
   78              		.loc 1 14 0 discriminator 2
+
+                        #####CS540 COMMENT Store %xmm2 (which is all 1s) to the 4 current elements
+                        #####in b
   79 002f 0F299000 		movaps	%xmm2, b-16(%rax)	# tmp107, MEM[symbol: b, index: ivtmp.32_24, offset: 0B]
   79      000000
+                        #####CS540 COMMENT Add the packed integers 0-3 to the current index
   80 0036 660FFECB 		paddd	%xmm3, %xmm1	# vect_cst_.5, vect_vec_iv_.6
   13:test21.c      ****     b[i] = 1.0;
   81              		.loc 1 13 0 discriminator 2
+
+                        #####CS540 COMMENT Store the casted value of %xmm0 at the current position
+                        #####in a
   82 003a 0F298000 		movaps	%xmm0, a-16(%rax)	# tmp102, MEM[symbol: a, index: ivtmp.32_24, offset: 0B]
   82      000000
   83 0041 483D0010 		cmpq	$4096, %rax	#, ivtmp.32
@@ -119,6 +139,8 @@
   19:test21.c      ****    {
   20:test21.c      ****     y = y + a[i];
   92              		.loc 1 20 0 discriminator 2
+                        #####CS540 COMMENT add the value at %rax and the low value of %xmm0
+                        #####as regular scalars
   93 0058 F30F5800 		addss	(%rax), %xmm0	# MEM[base: _6, offset: 0B], y
   94              	.LVL3:
   95 005c 4883C004 		addq	$4, %rax	#, ivtmp.25
@@ -131,6 +153,7 @@
   22:test21.c      **** 
   23:test21.c      ****   n = dx(y);
   99              		.loc 1 23 0
+                        #####CS540 Comment cast the value as a double
  100 0068 F30F5AC0 		cvtss2sd	%xmm0, %xmm0	# y, D.1795
  101              	.LVL4:
  102 006c B8010000 		movl	$1, %eax	#,
@@ -157,7 +180,7 @@
  122 001c 04000000 		.long	4
  123              		.align 16
  124              	.LC3:
- 125 0020 0000803F 		.long	1065353216
+ 125 0020 0000803F 		.long	1065353216 #Floating point representations of 1
  126 0024 0000803F 		.long	1065353216
  127 0028 0000803F 		.long	1065353216
  128 002c 0000803F 		.long	1065353216

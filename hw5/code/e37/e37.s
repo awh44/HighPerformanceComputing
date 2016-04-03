@@ -522,17 +522,30 @@ e37.c:65: note: not vectorized: failed to find SLP opportunities in basic block.
   49:e37.c         ****   ind  = _mm_set_ps(3, 2, 1, 0);
   50:e37.c         ****   incr = _mm_set1_ps(4);
   61              		.loc 1 50 0
+
+                         
+                        #####CS540 COMMENT Moves the data held at .LC2
+                        #####(4, 4, 4, 4) into the xmm2 SSE register, aligned and packed
   62 0000 0F281500 		movaps	.LC2(%rip), %xmm2	#, tmp99
   62      000000
   63 0007 BA000000 		movl	$x+4096, %edx	#, D.4726
   63      00
   64 000c B8000000 		movl	$x, %eax	#, ivtmp.41
   64      00
+                        #####CS540 COMMENT Stores the data in %xmm2 SSE register
+                        #####back to the memory location of the increment variable, aligned
+                        #####and packed
   65 0011 0F291500 		movaps	%xmm2, incr(%rip)	# tmp99, incr
   65      000000
   66              	.LVL1:
+                        #####CS540 COMMENT Moves the data from .LC3 (3, 2, 1, 0) to
+                        #####the SSE register %xmm3. Moves a double quadword (16 bytes)
+                        #####that is aligned
   67 0018 660F6F1D 		movdqa	.LC3(%rip), %xmm3	#, vect_cst_.20
   67      00000000 
+                        #####CS540 COMMENT Moves the data at .LC0 (integer representations
+                        #####of 3, 2, 1, 0) to the SSE register %xmm0. Moves a double quadword
+                        #####(16 bytes) that is aligned
   68 0020 660F6F05 		movdqa	.LC0(%rip), %xmm0	#, vect_vec_iv_.21
   68      00000000 
   69 0028 EB0A     		jmp	.L3	#
@@ -541,8 +554,12 @@ e37.c:65: note: not vectorized: failed to find SLP opportunities in basic block.
   71      0000
   72              		.p2align 3
   73              	.L7:
+								#####CS540 COMMENT Moves the data %xmm1 to the SSE register %xmm0.
+                        #####Moves a double quadword (16 bytes) that is aligned
   74 0030 660F6FC1 		movdqa	%xmm1, %xmm0	# vect_vec_iv_.21, vect_vec_iv_.21
   75              	.L3:
+                        #####CS540 COMMENT Moves the data %xmm0 to the SSE register %xmm1.
+                        #####Moves a double quadword (16 bytes) that is aligned
   76 0034 660F6FC8 		movdqa	%xmm0, %xmm1	# vect_vec_iv_.21, vect_vec_iv_.21
   77 0038 4883C010 		addq	$16, %rax	#, ivtmp.41
   51:e37.c         **** 
@@ -550,13 +567,26 @@ e37.c:65: note: not vectorized: failed to find SLP opportunities in basic block.
   53:e37.c         ****    {
   54:e37.c         ****     x[i] = (float) i;
   78              		.loc 1 54 0 discriminator 2
+
+                        #####CS540 COMMENT Converts the integers in %xmm0 to floating point, i.e.,
+                        #####does the cast of (float)
   79 003c 0F5BC0   		cvtdq2ps	%xmm0, %xmm0	# vect_vec_iv_.21, tmp94
+
+                        #####CS540 COMMENT Save the packed scalars back to the stack
   80 003f 0F2940F0 		movaps	%xmm0, -16(%rax)	# tmp94, MEM[base: _19, offset: 0B]
+
   81 0043 483D0000 		cmpq	$x+4096, %rax	#, ivtmp.41
   81      0000
+
+                        #####CS540 COMMENT Add doubleword packed integers - %xmm1, the current
+                        #####loop indices and %xmm3, which are the values 0-3
   82 0049 660FFECB 		paddd	%xmm3, %xmm1	# vect_cst_.20, vect_vec_iv_.21
+
   83 004d 75E1     		jne	.L7	#,
   84              		.loc 1 54 0 is_stmt 0
+
+                        #####CS540 COMMENT PUts the floating put values 0, 1, 2, 3 into
+                        #####%xmm0, an SSE register, aligned, packed, and single precision
   85 004f 0F280500 		movaps	.LC1(%rip), %xmm0	#, D.4727
   85      000000
   86 0056 B8000000 		movl	$x, %eax	#, ivtmp.36
@@ -729,13 +759,21 @@ e37.c:65: note: not vectorized: failed to find SLP opportunities in basic block.
  156:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h **** {
  157:/usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h ****   return (__m128) __builtin_ia32_addps ((__v4sf)__A, (__v4sf)__B);
   96              		.loc 2 157 0 is_stmt 1 discriminator 2
+
+                        #####CS540 COMMENT Load from memory into %xmm1
   97 0064 0F2848F0 		movaps	-16(%rax), %xmm1	# MEM[base: _8, offset: 0B], tmp95
+
+                        #####CS540 COMMENT Add the two SSE registers together, as 4 packed
+                        #####single-precision values
   98 0068 0F58C8   		addps	%xmm0, %xmm1	# D.4727, tmp95
   99              	.LVL5:
  100              	.LBE15:
  101              	.LBE14:
  102              	.LBB16:
  103              	.LBB17:
+
+                        #####CS540 COMMENT repeat the same, but with %xmm2 and %xmm0, with the latter
+                        #####as the destination
  104 006b 0F58C2   		addps	%xmm2, %xmm0	# tmp99, D.4727
  105              	.LVL6:
  106              	.LBE17:
@@ -1557,8 +1595,14 @@ e37.c:65: note: not vectorized: failed to find SLP opportunities in basic block.
  120              	.LVL8:
  121 007c 31C0     		xorl	%eax, %eax	#
  122              	.LVL9:
+
+                        #####CS540 COMMENT Store the result of the computation, stored in %xmm1,
+                        #####back into the x vector
  123 007e 0F290D00 		movaps	%xmm1, x_vec(%rip)	# tmp95, x_vec
  123      000000
+
+                        #####CS540 COMMENT Store the next index value back into the memory location
+                        #####of ind
  124 0085 0F290500 		movaps	%xmm0, ind(%rip)	# D.4727, ind
  124      000000
  125 008c E9000000 		jmp	dx	#
@@ -1579,13 +1623,13 @@ e37.c:65: note: not vectorized: failed to find SLP opportunities in basic block.
  140 000c 03000000 		.long	3
  141              		.align 16
  142              	.LC1:
- 143 0010 00000000 		.long	0
+ 143 0010 00000000 		.long	0 #floating point represtnations of '0'-'3'
  144 0014 0000803F 		.long	1065353216
  145 0018 00000040 		.long	1073741824
  146 001c 00004040 		.long	1077936128
  147              		.align 16
  148              	.LC2:
- 149 0020 00008040 		.long	1082130432
+ 149 0020 00008040 		.long	1082130432 #floating point representation of '4'
  150 0024 00008040 		.long	1082130432
  151 0028 00008040 		.long	1082130432
  152 002c 00008040 		.long	1082130432
